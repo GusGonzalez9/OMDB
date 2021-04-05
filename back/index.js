@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const routes = require("./api/routes");
 const app = express();
 const { db } = require("./api/models/index");
+const PORT = 4500;
 app.use(morgan("dev"));
 app.use(express.static("./public"));
 app.use(express.json());
@@ -15,7 +16,7 @@ app.get("/*", (req, res) => {
 });
 
 db.sync({ force: false }).then(() => {
-  app.listen(4500, () => {
-    console.log("Listening on port 4500");
+  app.listen(PORT, () => {
+    console.log("Listening on port ", PORT);
   });
 });

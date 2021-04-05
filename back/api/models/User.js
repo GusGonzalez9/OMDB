@@ -8,6 +8,18 @@ User.prototype.hashPassword = function (password) {
 
 User.init(
   {
+    firstName: {
+      type: S.STRING,
+      allowNull: false,
+    },
+    avatar: {
+      type: S.STRING,
+      allowNull: true,
+    },
+    lastName: {
+      type: S.STRING,
+      allowNull: false,
+    },
     email: {
       type: S.STRING,
       allowNull: false,

@@ -26,4 +26,11 @@ const userRegister = async (req, res) => {
   }
 };
 
-module.exports = { userLogin, userRegister };
+const userData = (req, res) => {
+  if (req.user) {
+    return res.status(200).send(req.user);
+  }
+  res.status(401).json({ error: "Unauthorized" });
+};
+
+module.exports = { userLogin, userRegister, userData };
