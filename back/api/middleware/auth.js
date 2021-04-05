@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
+/* const privateKey = process.env.KEY_SECRET; */
 const privateKey = "clavesecreta1234";
-
-//a la hora de hacer el login, le damos un token al user
+const { User } = require("../models/index");
 
 const generateNewToken = (user) => {
   return jwt.sign(
@@ -9,24 +9,26 @@ const generateNewToken = (user) => {
       exp: Math.floor(Date.now() / 1000) + 60 * 60,
       data: user,
     },
+
     privateKey,
     { algorithm: "HS256" }
   );
 };
 
-const decode = (idToken) => {
-  return jwt.verify(idToken, privateKey);
-};
+const userAuthenticate = async (req, res, next) => {
+  let Token = req.headers.authorization.slice(7);
 
-const userAuthenticate = async (req, res) => {
-  let idToken;
-  if (
-    req.headers.authorization &&
-    req.headers.authorization.startsWith("Bearer ")
-  ) {
-    idToken = req.headers.authorization.slice(7);
-    let decoded = await decode(idToken);
+  try {
+    let decoded = jwt.verify(Token, privateKey);
+
+    let user = await User.findOne({ where: { email: decoded.email } });
+    if (user) {
+      req.user = user;
+    }
+    return next();
+  } catch {
+    res.status(401).json({ error: "Usuario no Logueado" });
   }
 };
 
-module.exports = { userAuthenticate, decode, generateNewToken };
+module.exports = { userAuthenticate, generateNewToken };
