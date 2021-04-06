@@ -16,25 +16,26 @@ export const userRegister = createAsyncThunk(USER_REGISTER, (user) => {
   return axios.post("/api/user/register", user);
 });
 
-const userLoggin = createAsyncThunk(USER_LOGGIN, (user) => {
+export const userLoggin = createAsyncThunk(USER_LOGGIN, user => {
+  console.log("asasd")
   return axios.post("/api/user/loggin", user).then((res) => {
     saveState(res.data);
     return res.data;
   });
 });
-export const fetchMe = createAsyncThunk(FETCH_ME, (user) => {
+export const fetchMe = createAsyncThunk(FETCH_ME, () => {
   let token = loadState("setUser").token;
   return axios
-    .get("/api/users/me", { headers: { Authorization: `${token}` } })
-    .then((res) => res.data)
+    .get("/api/user/me", { headers: { Authorization: `${token}` } })
+    .then((res) => console.log(res.data))
     .then((data) => {
+      console.log
       return { data, token };
     });
 });
 export const clearUser = createAction(CLEAR_USER);
 
-const userReducer = createReducer([], {
-  [userRegister.fullfiled]: (state, action) => action.payload,
+const userReducer = createReducer({}, {
   [userLoggin.fullfiled]: (state, action) => action.payload,
   [fetchMe.fullfiled]: (state, action) => action.payload,
   [clearUser.fullfiled]: (state, action) => {},

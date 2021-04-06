@@ -86,72 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/createClass.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
@@ -618,86 +552,6 @@ function _unsupportedIterableToArray(o, minLen) {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/extends.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/extends.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _extends() {
-  module.exports = _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  module.exports["default"] = module.exports, module.exports.__esModule = true;
-  return _extends.apply(this, arguments);
-}
-
-module.exports = _extends;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  module.exports["default"] = module.exports, module.exports.__esModule = true;
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/inherits.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/inherits.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
@@ -778,112 +632,6 @@ function _interopRequireWildcard(obj) {
 }
 
 module.exports = _interopRequireWildcard;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js");
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutProperties;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutPropertiesLoose;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js")["default"];
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  module.exports["default"] = module.exports, module.exports.__esModule = true;
-  return _setPrototypeOf(o, p);
-}
-
-module.exports = _setPrototypeOf;
 module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
@@ -4915,6 +4663,551 @@ if (true) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Grid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Grid */ "./node_modules/@material-ui/core/esm/Grid/Grid.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Grid__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/GridList/GridList.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/GridList/GridList.js ***!
+  \*****************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_is__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+
+
+
+
+
+
+
+var styles = {
+  /* Styles applied to the root element. */
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    overflowY: 'auto',
+    listStyle: 'none',
+    padding: 0,
+    WebkitOverflowScrolling: 'touch' // Add iOS momentum scrolling.
+
+  }
+};
+var GridList = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function GridList(props, ref) {
+  var _props$cellHeight = props.cellHeight,
+      cellHeight = _props$cellHeight === void 0 ? 180 : _props$cellHeight,
+      children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$cols = props.cols,
+      cols = _props$cols === void 0 ? 2 : _props$cols,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'ul' : _props$component,
+      _props$spacing = props.spacing,
+      spacing = _props$spacing === void 0 ? 4 : _props$spacing,
+      style = props.style,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["cellHeight", "children", "classes", "className", "cols", "component", "spacing", "style"]);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_5__["default"])(classes.root, className),
+    ref: ref,
+    style: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      margin: -spacing / 2
+    }, style)
+  }, other), react__WEBPACK_IMPORTED_MODULE_2__["Children"].map(children, function (child) {
+    if (! /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["isValidElement"](child)) {
+      return null;
+    }
+
+    if (true) {
+      if (Object(react_is__WEBPACK_IMPORTED_MODULE_3__["isFragment"])(child)) {
+        console.error(["Material-UI: The GridList component doesn't accept a Fragment as a child.", 'Consider providing an array instead.'].join('\n'));
+      }
+    }
+
+    var childCols = child.props.cols || 1;
+    var childRows = child.props.rows || 1;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["cloneElement"](child, {
+      style: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        width: "".concat(100 / cols * childCols, "%"),
+        height: cellHeight === 'auto' ? 'auto' : cellHeight * childRows + spacing,
+        padding: spacing / 2
+      }, child.props.style)
+    });
+  }));
+});
+ true ? GridList.propTypes = {
+  /**
+   * Number of px for one cell height.
+   * You can set `'auto'` if you want to let the children determine the height.
+   */
+  cellHeight: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.oneOf(['auto'])]),
+
+  /**
+   * Grid Tiles that will be in Grid List.
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.node.isRequired,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+
+  /**
+   * Number of columns.
+   */
+  cols: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a
+  /* @typescript-to-proptypes-ignore */
+  .elementType,
+
+  /**
+   * Number of px for the spacing between tiles.
+   */
+  spacing: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+
+  /**
+   * @ignore
+   */
+  style: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_6__["default"])(styles, {
+  name: 'MuiGridList'
+})(GridList));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/GridList/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/GridList/index.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GridList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GridList */ "./node_modules/@material-ui/core/esm/GridList/GridList.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _GridList__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/GridListTile/GridListTile.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/GridListTile/GridListTile.js ***!
+  \*************************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _utils_debounce__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/debounce */ "./node_modules/@material-ui/core/esm/utils/debounce.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _utils_isMuiElement__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/isMuiElement */ "./node_modules/@material-ui/core/esm/utils/isMuiElement.js");
+
+
+
+
+
+
+
+
+
+var styles = {
+  /* Styles applied to the root element. */
+  root: {
+    boxSizing: 'border-box',
+    flexShrink: 0
+  },
+
+  /* Styles applied to the `div` element that wraps the children. */
+  tile: {
+    position: 'relative',
+    display: 'block',
+    // In case it's not rendered with a div.
+    height: '100%',
+    overflow: 'hidden'
+  },
+
+  /* Styles applied to an `img` element child, if needed to ensure it covers the tile. */
+  imgFullHeight: {
+    height: '100%',
+    transform: 'translateX(-50%)',
+    position: 'relative',
+    left: '50%'
+  },
+
+  /* Styles applied to an `img` element child, if needed to ensure it covers the tile. */
+  imgFullWidth: {
+    width: '100%',
+    position: 'relative',
+    transform: 'translateY(-50%)',
+    top: '50%'
+  }
+};
+
+var fit = function fit(imgEl, classes) {
+  if (!imgEl || !imgEl.complete) {
+    return;
+  }
+
+  if (imgEl.width / imgEl.height > imgEl.parentElement.offsetWidth / imgEl.parentElement.offsetHeight) {
+    var _imgEl$classList, _imgEl$classList2;
+
+    (_imgEl$classList = imgEl.classList).remove.apply(_imgEl$classList, Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(classes.imgFullWidth.split(' ')));
+
+    (_imgEl$classList2 = imgEl.classList).add.apply(_imgEl$classList2, Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(classes.imgFullHeight.split(' ')));
+  } else {
+    var _imgEl$classList3, _imgEl$classList4;
+
+    (_imgEl$classList3 = imgEl.classList).remove.apply(_imgEl$classList3, Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(classes.imgFullHeight.split(' ')));
+
+    (_imgEl$classList4 = imgEl.classList).add.apply(_imgEl$classList4, Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(classes.imgFullWidth.split(' ')));
+  }
+};
+
+function ensureImageCover(imgEl, classes) {
+  if (!imgEl) {
+    return;
+  }
+
+  if (imgEl.complete) {
+    fit(imgEl, classes);
+  } else {
+    imgEl.addEventListener('load', function () {
+      fit(imgEl, classes);
+    });
+  }
+}
+
+var GridListTile = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["forwardRef"](function GridListTile(props, ref) {
+  // cols rows default values are for docs only
+  var children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$cols = props.cols,
+      cols = _props$cols === void 0 ? 1 : _props$cols,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'li' : _props$component,
+      _props$rows = props.rows,
+      rows = _props$rows === void 0 ? 1 : _props$rows,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["children", "classes", "className", "cols", "component", "rows"]);
+
+  var imgRef = react__WEBPACK_IMPORTED_MODULE_3__["useRef"](null);
+  react__WEBPACK_IMPORTED_MODULE_3__["useEffect"](function () {
+    ensureImageCover(imgRef.current, classes);
+  });
+  react__WEBPACK_IMPORTED_MODULE_3__["useEffect"](function () {
+    var handleResize = Object(_utils_debounce__WEBPACK_IMPORTED_MODULE_6__["default"])(function () {
+      fit(imgRef.current, classes);
+    });
+    window.addEventListener('resize', handleResize);
+    return function () {
+      handleResize.clear();
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [classes]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["createElement"](Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_5__["default"])(classes.root, className),
+    ref: ref
+  }, other), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["createElement"]("div", {
+    className: classes.tile
+  }, react__WEBPACK_IMPORTED_MODULE_3__["Children"].map(children, function (child) {
+    if (! /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["isValidElement"](child)) {
+      return null;
+    }
+
+    if (child.type === 'img' || Object(_utils_isMuiElement__WEBPACK_IMPORTED_MODULE_8__["default"])(child, ['Image'])) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__["cloneElement"](child, {
+        ref: imgRef
+      });
+    }
+
+    return child;
+  })));
+});
+ true ? GridListTile.propTypes = {
+  /**
+   * Theoretically you can pass any node as children, but the main use case is to pass an img,
+   * in which case GridListTile takes care of making the image "cover" available space
+   * (similar to `background-size: cover` or to `object-fit: cover`).
+   */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.node,
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object.isRequired,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
+
+  /**
+   * Width of the tile in number of grid cells.
+   */
+  cols: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a
+  /* @typescript-to-proptypes-ignore */
+  .elementType,
+
+  /**
+   * Height of the tile in number of grid cells.
+   */
+  rows: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_7__["default"])(styles, {
+  name: 'MuiGridListTile'
+})(GridListTile));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/GridListTile/index.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/GridListTile/index.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GridListTile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GridListTile */ "./node_modules/@material-ui/core/esm/GridListTile/GridListTile.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _GridListTile__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/GridListTileBar/GridListTileBar.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/GridListTileBar/GridListTileBar.js ***!
+  \*******************************************************************************/
+/*! exports provided: styles, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styles", function() { return styles; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      height: 48,
+      background: 'rgba(0, 0, 0, 0.5)',
+      display: 'flex',
+      alignItems: 'center',
+      fontFamily: theme.typography.fontFamily
+    },
+
+    /* Styles applied to the root element if `titlePosition="bottom"`. */
+    titlePositionBottom: {
+      bottom: 0
+    },
+
+    /* Styles applied to the root element if `titlePosition="top"`. */
+    titlePositionTop: {
+      top: 0
+    },
+
+    /* Styles applied to the root element if a `subtitle` is provided. */
+    rootSubtitle: {
+      height: 68
+    },
+
+    /* Styles applied to the title and subtitle container element. */
+    titleWrap: {
+      flexGrow: 1,
+      marginLeft: 16,
+      marginRight: 16,
+      color: theme.palette.common.white,
+      overflow: 'hidden'
+    },
+
+    /* Styles applied to the container element if `actionPosition="left"`. */
+    titleWrapActionPosLeft: {
+      marginLeft: 0
+    },
+
+    /* Styles applied to the container element if `actionPosition="right"`. */
+    titleWrapActionPosRight: {
+      marginRight: 0
+    },
+
+    /* Styles applied to the title container element. */
+    title: {
+      fontSize: theme.typography.pxToRem(16),
+      lineHeight: '24px',
+      textOverflow: 'ellipsis',
+      overflow: 'hidden',
+      whiteSpace: 'nowrap'
+    },
+
+    /* Styles applied to the subtitle container element. */
+    subtitle: {
+      fontSize: theme.typography.pxToRem(12),
+      lineHeight: 1,
+      textOverflow: 'ellipsis',
+      overflow: 'hidden',
+      whiteSpace: 'nowrap'
+    },
+
+    /* Styles applied to the actionIcon if supplied. */
+    actionIcon: {},
+
+    /* Styles applied to the actionIcon if `actionPosition="left"`. */
+    actionIconActionPosLeft: {
+      order: -1
+    }
+  };
+};
+var GridListTileBar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function GridListTileBar(props, ref) {
+  var actionIcon = props.actionIcon,
+      _props$actionPosition = props.actionPosition,
+      actionPosition = _props$actionPosition === void 0 ? 'right' : _props$actionPosition,
+      classes = props.classes,
+      className = props.className,
+      subtitle = props.subtitle,
+      title = props.title,
+      _props$titlePosition = props.titlePosition,
+      titlePosition = _props$titlePosition === void 0 ? 'bottom' : _props$titlePosition,
+      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["actionIcon", "actionPosition", "classes", "className", "subtitle", "title", "titlePosition"]);
+
+  var actionPos = actionIcon && actionPosition;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.root, className, titlePosition === 'top' ? classes.titlePositionTop : classes.titlePositionBottom, subtitle && classes.rootSubtitle),
+    ref: ref
+  }, other), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.titleWrap, {
+      'left': classes.titleWrapActionPosLeft,
+      'right': classes.titleWrapActionPosRight
+    }[actionPos])
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", {
+    className: classes.title
+  }, title), subtitle ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", {
+    className: classes.subtitle
+  }, subtitle) : null), actionIcon ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(classes.actionIcon, actionPos === 'left' && classes.actionIconActionPosLeft)
+  }, actionIcon) : null);
+});
+ true ? GridListTileBar.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+
+  /**
+   * An IconButton element to be used as secondary action target
+   * (primary action target is the tile itself).
+   */
+  actionIcon: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Position of secondary action IconButton.
+   */
+  actionPosition: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['left', 'right']),
+
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+
+  /**
+   * @ignore
+   */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+
+  /**
+   * String or element serving as subtitle (support text).
+   */
+  subtitle: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Title to be displayed on tile.
+   */
+  title: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.node,
+
+  /**
+   * Position of the title bar.
+   */
+  titlePosition: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOf(['bottom', 'top'])
+} : undefined;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__["default"])(styles, {
+  name: 'MuiGridListTileBar'
+})(GridListTileBar));
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/core/esm/GridListTileBar/index.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@material-ui/core/esm/GridListTileBar/index.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GridListTileBar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GridListTileBar */ "./node_modules/@material-ui/core/esm/GridListTileBar/GridListTileBar.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _GridListTileBar__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
@@ -18277,6 +18570,37 @@ exports.default = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/icons/StarBorder.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@material-ui/icons/StarBorder.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
+  d: "M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+}), 'StarBorder');
+
+exports.default = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/icons/utils/createSvgIcon.js":
 /*!****************************************************************!*\
   !*** ./node_modules/@material-ui/icons/utils/createSvgIcon.js ***!
@@ -31232,192 +31556,6 @@ var jss = create();
 
 /* harmony default export */ __webpack_exports__["default"] = (jss);
 
-
-
-/***/ }),
-
-/***/ "./node_modules/keycode/index.js":
-/*!***************************************!*\
-  !*** ./node_modules/keycode/index.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// Source: http://jsfiddle.net/vWx8V/
-// http://stackoverflow.com/questions/5603195/full-list-of-javascript-keycodes
-
-/**
- * Conenience method returns corresponding value for given keyName or keyCode.
- *
- * @param {Mixed} keyCode {Number} or keyName {String}
- * @return {Mixed}
- * @api public
- */
-
-function keyCode(searchInput) {
-  // Keyboard Events
-  if (searchInput && 'object' === typeof searchInput) {
-    var hasKeyCode = searchInput.which || searchInput.keyCode || searchInput.charCode
-    if (hasKeyCode) searchInput = hasKeyCode
-  }
-
-  // Numbers
-  if ('number' === typeof searchInput) return names[searchInput]
-
-  // Everything else (cast to string)
-  var search = String(searchInput)
-
-  // check codes
-  var foundNamedKey = codes[search.toLowerCase()]
-  if (foundNamedKey) return foundNamedKey
-
-  // check aliases
-  var foundNamedKey = aliases[search.toLowerCase()]
-  if (foundNamedKey) return foundNamedKey
-
-  // weird character?
-  if (search.length === 1) return search.charCodeAt(0)
-
-  return undefined
-}
-
-/**
- * Compares a keyboard event with a given keyCode or keyName.
- *
- * @param {Event} event Keyboard event that should be tested
- * @param {Mixed} keyCode {Number} or keyName {String}
- * @return {Boolean}
- * @api public
- */
-keyCode.isEventKey = function isEventKey(event, nameOrCode) {
-  if (event && 'object' === typeof event) {
-    var keyCode = event.which || event.keyCode || event.charCode
-    if (keyCode === null || keyCode === undefined) { return false; }
-    if (typeof nameOrCode === 'string') {
-      // check codes
-      var foundNamedKey = codes[nameOrCode.toLowerCase()]
-      if (foundNamedKey) { return foundNamedKey === keyCode; }
-    
-      // check aliases
-      var foundNamedKey = aliases[nameOrCode.toLowerCase()]
-      if (foundNamedKey) { return foundNamedKey === keyCode; }
-    } else if (typeof nameOrCode === 'number') {
-      return nameOrCode === keyCode;
-    }
-    return false;
-  }
-}
-
-exports = module.exports = keyCode;
-
-/**
- * Get by name
- *
- *   exports.code['enter'] // => 13
- */
-
-var codes = exports.code = exports.codes = {
-  'backspace': 8,
-  'tab': 9,
-  'enter': 13,
-  'shift': 16,
-  'ctrl': 17,
-  'alt': 18,
-  'pause/break': 19,
-  'caps lock': 20,
-  'esc': 27,
-  'space': 32,
-  'page up': 33,
-  'page down': 34,
-  'end': 35,
-  'home': 36,
-  'left': 37,
-  'up': 38,
-  'right': 39,
-  'down': 40,
-  'insert': 45,
-  'delete': 46,
-  'command': 91,
-  'left command': 91,
-  'right command': 93,
-  'numpad *': 106,
-  'numpad +': 107,
-  'numpad -': 109,
-  'numpad .': 110,
-  'numpad /': 111,
-  'num lock': 144,
-  'scroll lock': 145,
-  'my computer': 182,
-  'my calculator': 183,
-  ';': 186,
-  '=': 187,
-  ',': 188,
-  '-': 189,
-  '.': 190,
-  '/': 191,
-  '`': 192,
-  '[': 219,
-  '\\': 220,
-  ']': 221,
-  "'": 222
-}
-
-// Helper aliases
-
-var aliases = exports.aliases = {
-  'windows': 91,
-  '⇧': 16,
-  '⌥': 18,
-  '⌃': 17,
-  '⌘': 91,
-  'ctl': 17,
-  'control': 17,
-  'option': 18,
-  'pause': 19,
-  'break': 19,
-  'caps': 20,
-  'return': 13,
-  'escape': 27,
-  'spc': 32,
-  'spacebar': 32,
-  'pgup': 33,
-  'pgdn': 34,
-  'ins': 45,
-  'del': 46,
-  'cmd': 91
-}
-
-/*!
- * Programatically add the following
- */
-
-// lower case chars
-for (i = 97; i < 123; i++) codes[String.fromCharCode(i)] = i - 32
-
-// numbers
-for (var i = 48; i < 58; i++) codes[i - 48] = i
-
-// function keys
-for (i = 1; i < 13; i++) codes['f'+i] = i + 111
-
-// numpad keys
-for (i = 0; i < 10; i++) codes['numpad '+i] = i + 96
-
-/**
- * Get by code
- *
- *   exports.name[13] // => 'Enter'
- */
-
-var names = exports.names = exports.title = {} // title for backward compat
-
-// Create reverse mapping
-for (i in codes) names[codes[i]] = i
-
-// Add aliases
-for (var alias in aliases) {
-  codes[alias] = aliases[alias]
-}
 
 
 /***/ }),
@@ -60818,200 +60956,6 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/react-event-listener/dist/react-event-listener.cjs.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/react-event-listener/dist/react-event-listener.cjs.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var _classCallCheck = _interopDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-var _createClass = _interopDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-var _possibleConstructorReturn = _interopDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
-var _getPrototypeOf = _interopDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
-var _inherits = _interopDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js"));
-var _typeof = _interopDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js"));
-var _objectWithoutProperties = _interopDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
-var _extends = _interopDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-var React = _interopDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-var PropTypes = _interopDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-var warning = _interopDefault(__webpack_require__(/*! warning */ "./node_modules/warning/warning.js"));
-
-function defineProperty(object, property, attr) {
-  return Object.defineProperty(object, property, attr);
-} // Passive options
-// Inspired by https://github.com/Modernizr/Modernizr/blob/master/feature-detects/dom/passiveeventlisteners.js
-
-
-var passiveOption = function () {
-  var cache = null;
-  return function () {
-    if (cache !== null) {
-      return cache;
-    }
-
-    var supportsPassiveOption = false;
-
-    try {
-      window.addEventListener('test', null, defineProperty({}, 'passive', {
-        get: function get() {
-          supportsPassiveOption = true;
-        }
-      }));
-    } catch (err) {//
-    }
-
-    cache = supportsPassiveOption;
-    return supportsPassiveOption;
-  }();
-}();
-
-var defaultEventOptions = {
-  capture: false,
-  passive: false
-};
-
-function mergeDefaultEventOptions(options) {
-  return _extends({}, defaultEventOptions, options);
-}
-
-function getEventListenerArgs(eventName, callback, options) {
-  var args = [eventName, callback];
-  args.push(passiveOption ? options : options.capture);
-  return args;
-}
-
-function on(target, eventName, callback, options) {
-  // eslint-disable-next-line prefer-spread
-  target.addEventListener.apply(target, getEventListenerArgs(eventName, callback, options));
-}
-
-function off(target, eventName, callback, options) {
-  // eslint-disable-next-line prefer-spread
-  target.removeEventListener.apply(target, getEventListenerArgs(eventName, callback, options));
-}
-
-function forEachListener(props, iteratee) {
-  var children = props.children,
-      target = props.target,
-      eventProps = _objectWithoutProperties(props, ["children", "target"]);
-
-  Object.keys(eventProps).forEach(function (name) {
-    if (name.substring(0, 2) !== 'on') {
-      return;
-    }
-
-    var prop = eventProps[name];
-
-    var type = _typeof(prop);
-
-    var isObject = type === 'object';
-    var isFunction = type === 'function';
-
-    if (!isObject && !isFunction) {
-      return;
-    }
-
-    var capture = name.substr(-7).toLowerCase() === 'capture';
-    var eventName = name.substring(2).toLowerCase();
-    eventName = capture ? eventName.substring(0, eventName.length - 7) : eventName;
-
-    if (isObject) {
-      iteratee(eventName, prop.handler, prop.options);
-    } else {
-      iteratee(eventName, prop, mergeDefaultEventOptions({
-        capture: capture
-      }));
-    }
-  });
-}
-
-function withOptions(handler, options) {
-   true ? warning(options, 'react-event-listener: should be specified options in withOptions.') : undefined;
-  return {
-    handler: handler,
-    options: mergeDefaultEventOptions(options)
-  };
-}
-
-var EventListener =
-/*#__PURE__*/
-function (_React$PureComponent) {
-  _inherits(EventListener, _React$PureComponent);
-
-  function EventListener() {
-    _classCallCheck(this, EventListener);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(EventListener).apply(this, arguments));
-  }
-
-  _createClass(EventListener, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.applyListeners(on);
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps) {
-      this.applyListeners(off, prevProps);
-      this.applyListeners(on);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.applyListeners(off);
-    }
-  }, {
-    key: "applyListeners",
-    value: function applyListeners(onOrOff) {
-      var props = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.props;
-      var target = props.target;
-
-      if (target) {
-        var element = target;
-
-        if (typeof target === 'string') {
-          element = window[target];
-        }
-
-        forEachListener(props, onOrOff.bind(null, element));
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return this.props.children || null;
-    }
-  }]);
-
-  return EventListener;
-}(React.PureComponent);
-
-EventListener.propTypes =  true ? {
-  /**
-   * You can provide a single child too.
-   */
-  children: PropTypes.node,
-
-  /**
-   * The DOM target to listen to.
-   */
-  target: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired
-} : undefined;
-
-exports.withOptions = withOptions;
-exports.default = EventListener;
-
-
-/***/ }),
-
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -64053,2719 +63997,6 @@ if (true) {
 
 //# sourceMappingURL=react-router.js.map
 
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-core/lib/checkIndexBounds.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-core/lib/checkIndexBounds.js ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views-core/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _warning = _interopRequireDefault(__webpack_require__(/*! warning */ "./node_modules/warning/warning.js"));
-
-var checkIndexBounds = function checkIndexBounds(props) {
-  var index = props.index,
-      children = props.children;
-
-  var childrenCount = _react.default.Children.count(children);
-
-   true ? (0, _warning.default)(index >= 0 && index <= childrenCount, "react-swipeable-view: the new index: ".concat(index, " is out of bounds: [0-").concat(childrenCount, "].")) : undefined;
-};
-
-var _default = checkIndexBounds;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-core/lib/computeIndex.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-core/lib/computeIndex.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views-core/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = computeIndex;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _constant = _interopRequireDefault(__webpack_require__(/*! ./constant */ "./node_modules/react-swipeable-views-core/lib/constant.js"));
-
-function computeIndex(params) {
-  var children = params.children,
-      startIndex = params.startIndex,
-      startX = params.startX,
-      pageX = params.pageX,
-      viewLength = params.viewLength,
-      resistance = params.resistance;
-  var indexMax = _react.default.Children.count(children) - 1;
-  var index = startIndex + (startX - pageX) / viewLength;
-  var newStartX;
-
-  if (!resistance) {
-    // Reset the starting point
-    if (index < 0) {
-      index = 0;
-      newStartX = (index - startIndex) * viewLength + pageX;
-    } else if (index > indexMax) {
-      index = indexMax;
-      newStartX = (index - startIndex) * viewLength + pageX;
-    }
-  } else if (index < 0) {
-    index = Math.exp(index * _constant.default.RESISTANCE_COEF) - 1;
-  } else if (index > indexMax) {
-    index = indexMax + 1 - Math.exp((indexMax - index) * _constant.default.RESISTANCE_COEF);
-  }
-
-  return {
-    index: index,
-    startX: newStartX
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-core/lib/constant.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-core/lib/constant.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  RESISTANCE_COEF: 0.6,
-  // This value is closed to what browsers are using internally to
-  // trigger a native scroll.
-  UNCERTAINTY_THRESHOLD: 3 // px
-
-};
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-core/lib/getDisplaySameSlide.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-core/lib/getDisplaySameSlide.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views-core/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var getDisplaySameSlide = function getDisplaySameSlide(props, nextProps) {
-  var displaySameSlide = false;
-
-  var getChildrenKey = function getChildrenKey(child) {
-    return child ? child.key : 'empty';
-  };
-
-  if (props.children.length && nextProps.children.length) {
-    var oldKeys = _react.default.Children.map(props.children, getChildrenKey);
-
-    var oldKey = oldKeys[props.index];
-
-    if (oldKey !== null && oldKey !== undefined) {
-      var newKeys = _react.default.Children.map(nextProps.children, getChildrenKey);
-
-      var newKey = newKeys[nextProps.index];
-
-      if (oldKey === newKey) {
-        displaySameSlide = true;
-      }
-    }
-  }
-
-  return displaySameSlide;
-};
-
-var _default = getDisplaySameSlide;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-core/lib/index.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-core/lib/index.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views-core/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "checkIndexBounds", {
-  enumerable: true,
-  get: function get() {
-    return _checkIndexBounds.default;
-  }
-});
-Object.defineProperty(exports, "computeIndex", {
-  enumerable: true,
-  get: function get() {
-    return _computeIndex.default;
-  }
-});
-Object.defineProperty(exports, "constant", {
-  enumerable: true,
-  get: function get() {
-    return _constant.default;
-  }
-});
-Object.defineProperty(exports, "getDisplaySameSlide", {
-  enumerable: true,
-  get: function get() {
-    return _getDisplaySameSlide.default;
-  }
-});
-Object.defineProperty(exports, "mod", {
-  enumerable: true,
-  get: function get() {
-    return _mod.default;
-  }
-});
-
-var _checkIndexBounds = _interopRequireDefault(__webpack_require__(/*! ./checkIndexBounds */ "./node_modules/react-swipeable-views-core/lib/checkIndexBounds.js"));
-
-var _computeIndex = _interopRequireDefault(__webpack_require__(/*! ./computeIndex */ "./node_modules/react-swipeable-views-core/lib/computeIndex.js"));
-
-var _constant = _interopRequireDefault(__webpack_require__(/*! ./constant */ "./node_modules/react-swipeable-views-core/lib/constant.js"));
-
-var _getDisplaySameSlide = _interopRequireDefault(__webpack_require__(/*! ./getDisplaySameSlide */ "./node_modules/react-swipeable-views-core/lib/getDisplaySameSlide.js"));
-
-var _mod = _interopRequireDefault(__webpack_require__(/*! ./mod */ "./node_modules/react-swipeable-views-core/lib/mod.js"));
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-core/lib/mod.js":
-/*!************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-core/lib/mod.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-// Extended version of % with negative integer support.
-function mod(n, m) {
-  var q = n % m;
-  return q < 0 ? q + m : q;
-}
-
-var _default = mod;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-core/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!**************************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-core/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \**************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/lib/autoPlay.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/lib/autoPlay.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = autoPlay;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/extends.js"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _shallowEqual = __webpack_require__(/*! shallow-equal */ "./node_modules/shallow-equal/dist/index.esm.js");
-
-var _reactEventListener = _interopRequireDefault(__webpack_require__(/*! react-event-listener */ "./node_modules/react-event-listener/dist/react-event-listener.cjs.js"));
-
-var _reactSwipeableViewsCore = __webpack_require__(/*! react-swipeable-views-core */ "./node_modules/react-swipeable-views-core/lib/index.js");
-
-function autoPlay(MyComponent) {
-  var AutoPlay =
-  /*#__PURE__*/
-  function (_React$Component) {
-    (0, _inherits2.default)(AutoPlay, _React$Component);
-
-    function AutoPlay(props) {
-      var _this;
-
-      (0, _classCallCheck2.default)(this, AutoPlay);
-      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AutoPlay).call(this, props));
-      _this.timer = null;
-      _this.state = {};
-
-      _this.handleInterval = function () {
-        var _this$props = _this.props,
-            children = _this$props.children,
-            direction = _this$props.direction,
-            onChangeIndex = _this$props.onChangeIndex,
-            slideCount = _this$props.slideCount;
-        var indexLatest = _this.state.index;
-        var indexNew = indexLatest;
-
-        if (direction === 'incremental') {
-          indexNew += 1;
-        } else {
-          indexNew -= 1;
-        }
-
-        if (slideCount || children) {
-          indexNew = (0, _reactSwipeableViewsCore.mod)(indexNew, slideCount || _react.default.Children.count(children));
-        } // Is uncontrolled
-
-
-        if (_this.props.index === undefined) {
-          _this.setState({
-            index: indexNew
-          });
-        }
-
-        if (onChangeIndex) {
-          onChangeIndex(indexNew, indexLatest);
-        }
-      };
-
-      _this.handleChangeIndex = function (index, indexLatest) {
-        // Is uncontrolled
-        if (_this.props.index === undefined) {
-          _this.setState({
-            index: index
-          });
-        }
-
-        if (_this.props.onChangeIndex) {
-          _this.props.onChangeIndex(index, indexLatest);
-        }
-      };
-
-      _this.handleSwitching = function (index, type) {
-        if (_this.timer) {
-          clearInterval(_this.timer);
-          _this.timer = null;
-        } else if (type === 'end') {
-          _this.startInterval();
-        }
-
-        if (_this.props.onSwitching) {
-          _this.props.onSwitching(index, type);
-        }
-      };
-
-      _this.handleVisibilityChange = function (e) {
-        if (e.target.hidden) {
-          clearInterval(_this.timer);
-        } else {
-          _this.startInterval();
-        }
-      };
-
-      _this.state.index = props.index || 0;
-      return _this;
-    }
-
-    (0, _createClass2.default)(AutoPlay, [{
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        this.startInterval();
-      }
-    }, {
-      key: "componentWillReceiveProps",
-      value: function componentWillReceiveProps(nextProps) {
-        var index = nextProps.index;
-
-        if (typeof index === 'number' && index !== this.props.index) {
-          this.setState({
-            index: index
-          });
-        }
-      }
-    }, {
-      key: "componentDidUpdate",
-      value: function componentDidUpdate(prevProps) {
-        var shouldResetInterval = !(0, _shallowEqual.shallowEqualObjects)({
-          index: prevProps.index,
-          interval: prevProps.interval,
-          autoplay: prevProps.autoplay
-        }, {
-          index: this.props.index,
-          interval: this.props.interval,
-          autoplay: this.props.autoplay
-        });
-
-        if (shouldResetInterval) {
-          this.startInterval();
-        }
-      }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
-        clearInterval(this.timer);
-      }
-    }, {
-      key: "startInterval",
-      value: function startInterval() {
-        var _this$props2 = this.props,
-            autoplay = _this$props2.autoplay,
-            interval = _this$props2.interval;
-        clearInterval(this.timer);
-
-        if (autoplay) {
-          this.timer = setInterval(this.handleInterval, interval);
-        }
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        var _this$props3 = this.props,
-            autoplay = _this$props3.autoplay,
-            direction = _this$props3.direction,
-            indexProp = _this$props3.index,
-            interval = _this$props3.interval,
-            onChangeIndex = _this$props3.onChangeIndex,
-            other = (0, _objectWithoutProperties2.default)(_this$props3, ["autoplay", "direction", "index", "interval", "onChangeIndex"]);
-        var index = this.state.index;
-
-        if (!autoplay) {
-          return _react.default.createElement(MyComponent, (0, _extends2.default)({
-            index: index,
-            onChangeIndex: onChangeIndex
-          }, other));
-        }
-
-        return _react.default.createElement(_reactEventListener.default, {
-          target: "document",
-          onVisibilityChange: this.handleVisibilityChange
-        }, _react.default.createElement(MyComponent, (0, _extends2.default)({
-          index: index,
-          onChangeIndex: this.handleChangeIndex,
-          onSwitching: this.handleSwitching
-        }, other)));
-      }
-    }]);
-    return AutoPlay;
-  }(_react.default.Component);
-
-  AutoPlay.propTypes =  true ? {
-    /**
-     * If `false`, the auto play behavior is disabled.
-     */
-    autoplay: _propTypes.default.bool,
-
-    /**
-     * @ignore
-     */
-    children: _propTypes.default.node,
-
-    /**
-     * This is the auto play direction.
-     */
-    direction: _propTypes.default.oneOf(['incremental', 'decremental']),
-
-    /**
-     * @ignore
-     */
-    index: _propTypes.default.number,
-
-    /**
-     * Delay between auto play transitions (in ms).
-     */
-    interval: _propTypes.default.number,
-
-    /**
-     * @ignore
-     */
-    onChangeIndex: _propTypes.default.func,
-
-    /**
-     * @ignore
-     */
-    onSwitching: _propTypes.default.func,
-
-    /**
-     * @ignore
-     */
-    slideCount: _propTypes.default.number
-  } : undefined;
-  AutoPlay.defaultProps = {
-    autoplay: true,
-    direction: 'incremental',
-    interval: 3000
-  };
-  return AutoPlay;
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/lib/bindKeyboard.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/lib/bindKeyboard.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = bindKeyboard;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/extends.js"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
-
-var _getPrototypeOf3 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _keycode = _interopRequireDefault(__webpack_require__(/*! keycode */ "./node_modules/keycode/index.js"));
-
-var _reactEventListener = _interopRequireDefault(__webpack_require__(/*! react-event-listener */ "./node_modules/react-event-listener/dist/react-event-listener.cjs.js"));
-
-var _reactSwipeableViewsCore = __webpack_require__(/*! react-swipeable-views-core */ "./node_modules/react-swipeable-views-core/lib/index.js");
-
-function bindKeyboard(MyComponent) {
-  var BindKeyboard =
-  /*#__PURE__*/
-  function (_React$Component) {
-    (0, _inherits2.default)(BindKeyboard, _React$Component);
-
-    function BindKeyboard() {
-      var _getPrototypeOf2;
-
-      var _this;
-
-      (0, _classCallCheck2.default)(this, BindKeyboard);
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(BindKeyboard)).call.apply(_getPrototypeOf2, [this].concat(args)));
-      _this.state = {};
-
-      _this.handleKeyDown = function (event) {
-        var action;
-        var _this$props = _this.props,
-            _this$props$axis = _this$props.axis,
-            axis = _this$props$axis === void 0 ? 'x' : _this$props$axis,
-            children = _this$props.children,
-            onChangeIndex = _this$props.onChangeIndex,
-            slideCount = _this$props.slideCount;
-
-        switch ((0, _keycode.default)(event)) {
-          case 'page down':
-          case 'down':
-            if (axis === 'y') {
-              action = 'decrease';
-            } else if (axis === 'y-reverse') {
-              action = 'increase';
-            }
-
-            break;
-
-          case 'left':
-            if (axis === 'x') {
-              action = 'decrease';
-            } else if (axis === 'x-reverse') {
-              action = 'increase';
-            }
-
-            break;
-
-          case 'page up':
-          case 'up':
-            if (axis === 'y') {
-              action = 'increase';
-            } else if (axis === 'y-reverse') {
-              action = 'decrease';
-            }
-
-            break;
-
-          case 'right':
-            if (axis === 'x') {
-              action = 'increase';
-            } else if (axis === 'x-reverse') {
-              action = 'decrease';
-            }
-
-            break;
-
-          default:
-            break;
-        }
-
-        if (action) {
-          var indexLatest = _this.state.index;
-          var indexNew = indexLatest;
-
-          if (action === 'increase') {
-            indexNew += 1;
-          } else {
-            indexNew -= 1;
-          }
-
-          if (slideCount || children) {
-            indexNew = (0, _reactSwipeableViewsCore.mod)(indexNew, slideCount || _react.default.Children.count(children));
-          } // Is uncontrolled
-
-
-          if (_this.props.index === undefined) {
-            _this.setState({
-              index: indexNew
-            });
-          }
-
-          if (onChangeIndex) {
-            onChangeIndex(indexNew, indexLatest);
-          }
-        }
-      };
-
-      _this.handleChangeIndex = function (index, indexLatest) {
-        // Is uncontrolled
-        if (_this.props.index === undefined) {
-          _this.setState({
-            index: index
-          });
-        }
-
-        if (_this.props.onChangeIndex) {
-          _this.props.onChangeIndex(index, indexLatest);
-        }
-      };
-
-      return _this;
-    }
-
-    (0, _createClass2.default)(BindKeyboard, [{
-      key: "componentWillMount",
-      value: function componentWillMount() {
-        this.setState({
-          index: this.props.index || 0
-        });
-      }
-    }, {
-      key: "componentWillReceiveProps",
-      value: function componentWillReceiveProps(nextProps) {
-        var index = nextProps.index;
-
-        if (typeof index === 'number' && index !== this.props.index) {
-          this.setState({
-            index: index
-          });
-        }
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        var _this$props2 = this.props,
-            indexProp = _this$props2.index,
-            onChangeIndex = _this$props2.onChangeIndex,
-            other = (0, _objectWithoutProperties2.default)(_this$props2, ["index", "onChangeIndex"]);
-        var index = this.state.index;
-        return _react.default.createElement(_reactEventListener.default, {
-          target: "window",
-          onKeyDown: this.handleKeyDown
-        }, _react.default.createElement(MyComponent, (0, _extends2.default)({
-          index: index,
-          onChangeIndex: this.handleChangeIndex
-        }, other)));
-      }
-    }]);
-    return BindKeyboard;
-  }(_react.default.Component);
-
-  BindKeyboard.propTypes =  true ? {
-    /**
-     * @ignore
-     */
-    axis: _propTypes.default.oneOf(['x', 'x-reverse', 'y', 'y-reverse']),
-
-    /**
-     * @ignore
-     */
-    children: _propTypes.default.node,
-
-    /**
-     * @ignore
-     */
-    index: _propTypes.default.number,
-
-    /**
-     * @ignore
-     */
-    onChangeIndex: _propTypes.default.func,
-
-    /**
-     * @ignore
-     */
-    slideCount: _propTypes.default.number
-  } : undefined;
-  return BindKeyboard;
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/lib/index.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/lib/index.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "autoPlay", {
-  enumerable: true,
-  get: function get() {
-    return _autoPlay.default;
-  }
-});
-Object.defineProperty(exports, "bindKeyboard", {
-  enumerable: true,
-  get: function get() {
-    return _bindKeyboard.default;
-  }
-});
-Object.defineProperty(exports, "virtualize", {
-  enumerable: true,
-  get: function get() {
-    return _virtualize.default;
-  }
-});
-
-var _autoPlay = _interopRequireDefault(__webpack_require__(/*! ./autoPlay */ "./node_modules/react-swipeable-views-utils/lib/autoPlay.js"));
-
-var _bindKeyboard = _interopRequireDefault(__webpack_require__(/*! ./bindKeyboard */ "./node_modules/react-swipeable-views-utils/lib/bindKeyboard.js"));
-
-var _virtualize = _interopRequireDefault(__webpack_require__(/*! ./virtualize */ "./node_modules/react-swipeable-views-utils/lib/virtualize.js"));
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/lib/virtualize.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/lib/virtualize.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = virtualize;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/extends.js"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _reactSwipeableViewsCore = __webpack_require__(/*! react-swipeable-views-core */ "./node_modules/react-swipeable-views-core/lib/index.js");
-
-function virtualize(MyComponent) {
-  var Virtualize =
-  /*#__PURE__*/
-  function (_PureComponent) {
-    (0, _inherits2.default)(Virtualize, _PureComponent);
-
-    function Virtualize(props) {
-      var _this;
-
-      (0, _classCallCheck2.default)(this, Virtualize);
-      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Virtualize).call(this, props));
-      _this.timer = null;
-      _this.state = {};
-
-      _this.handleChangeIndex = function (indexContainer, indexLatest) {
-        var _this$props = _this.props,
-            slideCount = _this$props.slideCount,
-            onChangeIndex = _this$props.onChangeIndex;
-        var indexDiff = indexContainer - indexLatest;
-        var index = _this.state.index + indexDiff;
-
-        if (slideCount) {
-          index = (0, _reactSwipeableViewsCore.mod)(index, slideCount);
-        } // Is uncontrolled
-
-
-        if (_this.props.index === undefined) {
-          _this.setIndex(index, indexContainer, indexDiff);
-        }
-
-        if (onChangeIndex) {
-          onChangeIndex(index, _this.state.index);
-        }
-      };
-
-      _this.handleTransitionEnd = function () {
-        // Delay the update of the window to fix an issue with react-motion.
-        _this.timer = setTimeout(function () {
-          _this.setWindow();
-        }, 0);
-
-        if (_this.props.onTransitionEnd) {
-          _this.props.onTransitionEnd();
-        }
-      };
-
-      _this.state.index = props.index || 0;
-      return _this;
-    }
-    /**
-     *
-     *           index          indexStop
-     *             |              |
-     * indexStart  |       indexContainer
-     *   |         |         |    |
-     * ------------|-------------------------->
-     *  -2    -1   0    1    2    3    4    5
-     */
-
-
-    (0, _createClass2.default)(Virtualize, [{
-      key: "componentWillMount",
-      value: function componentWillMount() {
-        this.setWindow(this.state.index);
-      }
-    }, {
-      key: "componentWillReceiveProps",
-      value: function componentWillReceiveProps(nextProps) {
-        var index = nextProps.index;
-
-        if (typeof index === 'number' && index !== this.props.index) {
-          var indexDiff = index - this.props.index;
-          this.setIndex(index, this.state.indexContainer + indexDiff, indexDiff);
-        }
-      }
-    }, {
-      key: "componentWillUnmount",
-      value: function componentWillUnmount() {
-        clearInterval(this.timer);
-      }
-    }, {
-      key: "setIndex",
-      value: function setIndex(index, indexContainer, indexDiff) {
-        var nextState = {
-          index: index,
-          indexContainer: indexContainer,
-          indexStart: this.state.indexStart,
-          indexStop: this.state.indexStop
-        }; // We are going forward, let's render one more slide ahead.
-
-        if (indexDiff > 0 && (!this.props.slideCount || nextState.indexStop < this.props.slideCount - 1)) {
-          nextState.indexStop += 1;
-        } // Extend the bounds if needed.
-
-
-        if (index > nextState.indexStop) {
-          nextState.indexStop = index;
-        }
-
-        var beforeAhead = nextState.indexStart - index; // Extend the bounds if needed.
-
-        if (beforeAhead > 0) {
-          nextState.indexContainer += beforeAhead;
-          nextState.indexStart -= beforeAhead;
-        }
-
-        this.setState(nextState);
-      }
-    }, {
-      key: "setWindow",
-      value: function setWindow() {
-        var index = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.state.index;
-        var slideCount = this.props.slideCount;
-        var beforeAhead = this.props.overscanSlideBefore;
-        var afterAhead = this.props.overscanSlideAfter;
-
-        if (slideCount) {
-          if (beforeAhead > index) {
-            beforeAhead = index;
-          }
-
-          if (afterAhead + index > slideCount - 1) {
-            afterAhead = slideCount - index - 1;
-          }
-        }
-
-        this.setState({
-          indexContainer: beforeAhead,
-          indexStart: index - beforeAhead,
-          indexStop: index + afterAhead
-        });
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        var _this$props2 = this.props,
-            children = _this$props2.children,
-            indexProp = _this$props2.index,
-            onChangeIndex = _this$props2.onChangeIndex,
-            onTransitionEnd = _this$props2.onTransitionEnd,
-            overscanSlideAfter = _this$props2.overscanSlideAfter,
-            overscanSlideBefore = _this$props2.overscanSlideBefore,
-            slideCount = _this$props2.slideCount,
-            slideRenderer = _this$props2.slideRenderer,
-            other = (0, _objectWithoutProperties2.default)(_this$props2, ["children", "index", "onChangeIndex", "onTransitionEnd", "overscanSlideAfter", "overscanSlideBefore", "slideCount", "slideRenderer"]);
-        var _this$state = this.state,
-            indexContainer = _this$state.indexContainer,
-            indexStart = _this$state.indexStart,
-            indexStop = _this$state.indexStop;
-        var slides = [];
-
-        for (var slideIndex = indexStart; slideIndex <= indexStop; slideIndex += 1) {
-          slides.push(slideRenderer({
-            index: slideIndex,
-            key: slideIndex
-          }));
-        }
-
-        return _react.default.createElement(MyComponent, (0, _extends2.default)({
-          index: indexContainer,
-          onChangeIndex: this.handleChangeIndex,
-          onTransitionEnd: this.handleTransitionEnd
-        }, other), slides);
-      }
-    }]);
-    return Virtualize;
-  }(_react.PureComponent);
-
-  Virtualize.propTypes =  true ? {
-    /**
-     * @ignore
-     */
-    children: function children(props, propName) {
-      if (props[propName] !== undefined) {
-        return new Error("The children property isn't supported.");
-      }
-
-      return null;
-    },
-
-    /**
-     * @ignore
-     */
-    index: _propTypes.default.number,
-
-    /**
-     * @ignore
-     */
-    onChangeIndex: _propTypes.default.func,
-
-    /**
-     * @ignore
-     */
-    onTransitionEnd: _propTypes.default.func,
-
-    /**
-     * Number of slide to render after the visible slide.
-     */
-    overscanSlideAfter: _propTypes.default.number,
-
-    /**
-     * Number of slide to render before the visible slide.
-     */
-    overscanSlideBefore: _propTypes.default.number,
-
-    /**
-     * When set, it's adding a limit to the number of slide: [0, slideCount].
-     */
-    slideCount: _propTypes.default.number,
-
-    /**
-     * Responsible for rendering a slide given an index.
-     * ({ index: number }): node.
-     */
-    slideRenderer: _propTypes.default.func.isRequired
-  } : undefined;
-  Virtualize.defaultProps = {
-    overscanSlideAfter: 2,
-    // Render one more slide for going backward as it's more difficult to
-    // keep the window up to date.
-    overscanSlideBefore: 3
-  };
-  return Virtualize;
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/assertThisInitialized.js":
-/*!***************************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
-  \***************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/classCallCheck.js":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/classCallCheck.js ***!
-  \********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/createClass.js":
-/*!*****************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/createClass.js ***!
-  \*****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/extends.js":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/extends.js ***!
-  \*************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _extends() {
-  module.exports = _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-module.exports = _extends;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/getPrototypeOf.js":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/inherits.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/inherits.js ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!***************************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \***************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
-/*!****************************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
-  \****************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  } else {
-    var newObj = {};
-
-    if (obj != null) {
-      for (var key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) {
-          var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
-
-          if (desc.get || desc.set) {
-            Object.defineProperty(newObj, key, desc);
-          } else {
-            newObj[key] = obj[key];
-          }
-        }
-      }
-    }
-
-    newObj.default = obj;
-    return newObj;
-  }
-}
-
-module.exports = _interopRequireWildcard;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/objectWithoutProperties.js":
-/*!*****************************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
-  \*****************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js");
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutProperties;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js":
-/*!**********************************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
-  \**********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutPropertiesLoose;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
-/*!*******************************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \*******************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/typeof.js");
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/setPrototypeOf.js":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
-  \********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-module.exports = _setPrototypeOf;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/typeof.js":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views-utils/node_modules/@babel/runtime/helpers/typeof.js ***!
-  \************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/lib/SwipeableViews.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/lib/SwipeableViews.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getDomTreeShapes = getDomTreeShapes;
-exports.findNativeHandler = findNativeHandler;
-exports.default = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/extends.js"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/inherits.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _warning = _interopRequireDefault(__webpack_require__(/*! warning */ "./node_modules/warning/warning.js"));
-
-var _reactSwipeableViewsCore = __webpack_require__(/*! react-swipeable-views-core */ "./node_modules/react-swipeable-views-core/lib/index.js");
-
-function addEventListener(node, event, handler, options) {
-  node.addEventListener(event, handler, options);
-  return {
-    remove: function remove() {
-      node.removeEventListener(event, handler, options);
-    }
-  };
-}
-
-var styles = {
-  container: {
-    direction: 'ltr',
-    display: 'flex',
-    willChange: 'transform'
-  },
-  slide: {
-    width: '100%',
-    WebkitFlexShrink: 0,
-    flexShrink: 0,
-    overflow: 'auto'
-  }
-};
-var axisProperties = {
-  root: {
-    x: {
-      overflowX: 'hidden'
-    },
-    'x-reverse': {
-      overflowX: 'hidden'
-    },
-    y: {
-      overflowY: 'hidden'
-    },
-    'y-reverse': {
-      overflowY: 'hidden'
-    }
-  },
-  flexDirection: {
-    x: 'row',
-    'x-reverse': 'row-reverse',
-    y: 'column',
-    'y-reverse': 'column-reverse'
-  },
-  transform: {
-    x: function x(translate) {
-      return "translate(".concat(-translate, "%, 0)");
-    },
-    'x-reverse': function xReverse(translate) {
-      return "translate(".concat(translate, "%, 0)");
-    },
-    y: function y(translate) {
-      return "translate(0, ".concat(-translate, "%)");
-    },
-    'y-reverse': function yReverse(translate) {
-      return "translate(0, ".concat(translate, "%)");
-    }
-  },
-  length: {
-    x: 'width',
-    'x-reverse': 'width',
-    y: 'height',
-    'y-reverse': 'height'
-  },
-  rotationMatrix: {
-    x: {
-      x: [1, 0],
-      y: [0, 1]
-    },
-    'x-reverse': {
-      x: [-1, 0],
-      y: [0, 1]
-    },
-    y: {
-      x: [0, 1],
-      y: [1, 0]
-    },
-    'y-reverse': {
-      x: [0, -1],
-      y: [1, 0]
-    }
-  },
-  scrollPosition: {
-    x: 'scrollLeft',
-    'x-reverse': 'scrollLeft',
-    y: 'scrollTop',
-    'y-reverse': 'scrollTop'
-  },
-  scrollLength: {
-    x: 'scrollWidth',
-    'x-reverse': 'scrollWidth',
-    y: 'scrollHeight',
-    'y-reverse': 'scrollHeight'
-  },
-  clientLength: {
-    x: 'clientWidth',
-    'x-reverse': 'clientWidth',
-    y: 'clientHeight',
-    'y-reverse': 'clientHeight'
-  }
-};
-
-function createTransition(property, options) {
-  var duration = options.duration,
-      easeFunction = options.easeFunction,
-      delay = options.delay;
-  return "".concat(property, " ").concat(duration, " ").concat(easeFunction, " ").concat(delay);
-} // We are using a 2x2 rotation matrix.
-
-
-function applyRotationMatrix(touch, axis) {
-  var rotationMatrix = axisProperties.rotationMatrix[axis];
-  return {
-    pageX: rotationMatrix.x[0] * touch.pageX + rotationMatrix.x[1] * touch.pageY,
-    pageY: rotationMatrix.y[0] * touch.pageX + rotationMatrix.y[1] * touch.pageY
-  };
-}
-
-function adaptMouse(event) {
-  event.touches = [{
-    pageX: event.pageX,
-    pageY: event.pageY
-  }];
-  return event;
-}
-
-function getDomTreeShapes(element, rootNode) {
-  var domTreeShapes = [];
-
-  while (element && element !== rootNode) {
-    // We reach a Swipeable View, no need to look higher in the dom tree.
-    if (element.hasAttribute('data-swipeable')) {
-      break;
-    }
-
-    var style = window.getComputedStyle(element);
-
-    if ( // Ignore the scroll children if the element is absolute positioned.
-    style.getPropertyValue('position') === 'absolute' || // Ignore the scroll children if the element has an overflowX hidden
-    style.getPropertyValue('overflow-x') === 'hidden') {
-      domTreeShapes = [];
-    } else if (element.clientWidth > 0 && element.scrollWidth > element.clientWidth || element.clientHeight > 0 && element.scrollHeight > element.clientHeight) {
-      // Ignore the nodes that have no width.
-      // Keep elements with a scroll
-      domTreeShapes.push({
-        element: element,
-        scrollWidth: element.scrollWidth,
-        scrollHeight: element.scrollHeight,
-        clientWidth: element.clientWidth,
-        clientHeight: element.clientHeight,
-        scrollLeft: element.scrollLeft,
-        scrollTop: element.scrollTop
-      });
-    }
-
-    element = element.parentNode;
-  }
-
-  return domTreeShapes;
-} // We can only have one node at the time claiming ownership for handling the swipe.
-// Otherwise, the UX would be confusing.
-// That's why we use a singleton here.
-
-
-var nodeWhoClaimedTheScroll = null;
-
-function findNativeHandler(params) {
-  var domTreeShapes = params.domTreeShapes,
-      pageX = params.pageX,
-      startX = params.startX,
-      axis = params.axis;
-  return domTreeShapes.some(function (shape) {
-    // Determine if we are going backward or forward.
-    var goingForward = pageX >= startX;
-
-    if (axis === 'x' || axis === 'y') {
-      goingForward = !goingForward;
-    }
-
-    var scrollPosition = shape[axisProperties.scrollPosition[axis]];
-    var areNotAtStart = scrollPosition > 0;
-    var areNotAtEnd = scrollPosition + shape[axisProperties.clientLength[axis]] < shape[axisProperties.scrollLength[axis]];
-
-    if (goingForward && areNotAtEnd || !goingForward && areNotAtStart) {
-      nodeWhoClaimedTheScroll = shape.element;
-      return true;
-    }
-
-    return false;
-  });
-}
-
-var SwipeableViews =
-/*#__PURE__*/
-function (_React$Component) {
-  (0, _inherits2.default)(SwipeableViews, _React$Component);
-
-  function SwipeableViews(props) {
-    var _this;
-
-    (0, _classCallCheck2.default)(this, SwipeableViews);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(SwipeableViews).call(this, props));
-    _this.rootNode = null;
-    _this.containerNode = null;
-    _this.ignoreNextScrollEvents = false;
-    _this.viewLength = 0;
-    _this.startX = 0;
-    _this.lastX = 0;
-    _this.vx = 0;
-    _this.startY = 0;
-    _this.isSwiping = undefined;
-    _this.started = false;
-    _this.startIndex = 0;
-    _this.transitionListener = null;
-    _this.touchMoveListener = null;
-    _this.activeSlide = null;
-    _this.indexCurrent = null;
-    _this.firstRenderTimeout = null;
-
-    _this.setRootNode = function (node) {
-      _this.rootNode = node;
-    };
-
-    _this.setContainerNode = function (node) {
-      _this.containerNode = node;
-    };
-
-    _this.setActiveSlide = function (node) {
-      _this.activeSlide = node;
-
-      _this.updateHeight();
-    };
-
-    _this.handleSwipeStart = function (event) {
-      var axis = _this.props.axis;
-      var touch = applyRotationMatrix(event.touches[0], axis);
-      _this.viewLength = _this.rootNode.getBoundingClientRect()[axisProperties.length[axis]];
-      _this.startX = touch.pageX;
-      _this.lastX = touch.pageX;
-      _this.vx = 0;
-      _this.startY = touch.pageY;
-      _this.isSwiping = undefined;
-      _this.started = true;
-      var computedStyle = window.getComputedStyle(_this.containerNode);
-      var transform = computedStyle.getPropertyValue('-webkit-transform') || computedStyle.getPropertyValue('transform');
-
-      if (transform && transform !== 'none') {
-        var transformValues = transform.split('(')[1].split(')')[0].split(',');
-        var rootStyle = window.getComputedStyle(_this.rootNode);
-        var tranformNormalized = applyRotationMatrix({
-          pageX: parseInt(transformValues[4], 10),
-          pageY: parseInt(transformValues[5], 10)
-        }, axis);
-        _this.startIndex = -tranformNormalized.pageX / (_this.viewLength - parseInt(rootStyle.paddingLeft, 10) - parseInt(rootStyle.paddingRight, 10)) || 0;
-      }
-    };
-
-    _this.handleSwipeMove = function (event) {
-      // The touch start event can be cancel.
-      // Makes sure we set a starting point.
-      if (!_this.started) {
-        _this.handleTouchStart(event);
-
-        return;
-      } // We are not supposed to hanlde this touch move.
-
-
-      if (nodeWhoClaimedTheScroll !== null && nodeWhoClaimedTheScroll !== _this.rootNode) {
-        return;
-      }
-
-      var _this$props = _this.props,
-          axis = _this$props.axis,
-          children = _this$props.children,
-          ignoreNativeScroll = _this$props.ignoreNativeScroll,
-          onSwitching = _this$props.onSwitching,
-          resistance = _this$props.resistance;
-      var touch = applyRotationMatrix(event.touches[0], axis); // We don't know yet.
-
-      if (_this.isSwiping === undefined) {
-        var dx = Math.abs(touch.pageX - _this.startX);
-        var dy = Math.abs(touch.pageY - _this.startY);
-        var isSwiping = dx > dy && dx > _reactSwipeableViewsCore.constant.UNCERTAINTY_THRESHOLD; // We let the parent handle the scroll.
-
-        if (!resistance && (axis === 'y' || axis === 'y-reverse') && (_this.indexCurrent === 0 && _this.startX < touch.pageX || _this.indexCurrent === _react.default.Children.count(_this.props.children) - 1 && _this.startX > touch.pageX)) {
-          _this.isSwiping = false;
-          return;
-        } // We are likely to be swiping, let's prevent the scroll event.
-
-
-        if (dx > dy) {
-          event.preventDefault();
-        }
-
-        if (isSwiping === true || dy > _reactSwipeableViewsCore.constant.UNCERTAINTY_THRESHOLD) {
-          _this.isSwiping = isSwiping;
-          _this.startX = touch.pageX; // Shift the starting point.
-
-          return; // Let's wait the next touch event to move something.
-        }
-      }
-
-      if (_this.isSwiping !== true) {
-        return;
-      } // We are swiping, let's prevent the scroll event.
-
-
-      event.preventDefault(); // Low Pass filter.
-
-      _this.vx = _this.vx * 0.5 + (touch.pageX - _this.lastX) * 0.5;
-      _this.lastX = touch.pageX;
-
-      var _computeIndex = (0, _reactSwipeableViewsCore.computeIndex)({
-        children: children,
-        resistance: resistance,
-        pageX: touch.pageX,
-        startIndex: _this.startIndex,
-        startX: _this.startX,
-        viewLength: _this.viewLength
-      }),
-          index = _computeIndex.index,
-          startX = _computeIndex.startX; // Add support for native scroll elements.
-
-
-      if (nodeWhoClaimedTheScroll === null && !ignoreNativeScroll) {
-        var domTreeShapes = getDomTreeShapes(event.target, _this.rootNode);
-        var hasFoundNativeHandler = findNativeHandler({
-          domTreeShapes: domTreeShapes,
-          startX: _this.startX,
-          pageX: touch.pageX,
-          axis: axis
-        }); // We abort the touch move handler.
-
-        if (hasFoundNativeHandler) {
-          return;
-        }
-      } // We are moving toward the edges.
-
-
-      if (startX) {
-        _this.startX = startX;
-      } else if (nodeWhoClaimedTheScroll === null) {
-        nodeWhoClaimedTheScroll = _this.rootNode;
-      }
-
-      _this.setIndexCurrent(index);
-
-      var callback = function callback() {
-        if (onSwitching) {
-          onSwitching(index, 'move');
-        }
-      };
-
-      if (_this.state.displaySameSlide || !_this.state.isDragging) {
-        _this.setState({
-          displaySameSlide: false,
-          isDragging: true
-        }, callback);
-      }
-
-      callback();
-    };
-
-    _this.handleSwipeEnd = function () {
-      nodeWhoClaimedTheScroll = null; // The touch start event can be cancel.
-      // Makes sure that a starting point is set.
-
-      if (!_this.started) {
-        return;
-      }
-
-      _this.started = false;
-
-      if (_this.isSwiping !== true) {
-        return;
-      }
-
-      var indexLatest = _this.state.indexLatest;
-      var indexCurrent = _this.indexCurrent;
-      var delta = indexLatest - indexCurrent;
-      var indexNew; // Quick movement
-
-      if (Math.abs(_this.vx) > _this.props.threshold) {
-        if (_this.vx > 0) {
-          indexNew = Math.floor(indexCurrent);
-        } else {
-          indexNew = Math.ceil(indexCurrent);
-        }
-      } else if (Math.abs(delta) > _this.props.hysteresis) {
-        // Some hysteresis with indexLatest.
-        indexNew = delta > 0 ? Math.floor(indexCurrent) : Math.ceil(indexCurrent);
-      } else {
-        indexNew = indexLatest;
-      }
-
-      var indexMax = _react.default.Children.count(_this.props.children) - 1;
-
-      if (indexNew < 0) {
-        indexNew = 0;
-      } else if (indexNew > indexMax) {
-        indexNew = indexMax;
-      }
-
-      _this.setIndexCurrent(indexNew);
-
-      _this.setState({
-        indexLatest: indexNew,
-        isDragging: false
-      }, function () {
-        if (_this.props.onSwitching) {
-          _this.props.onSwitching(indexNew, 'end');
-        }
-
-        if (_this.props.onChangeIndex && indexNew !== indexLatest) {
-          _this.props.onChangeIndex(indexNew, indexLatest, {
-            reason: 'swipe'
-          });
-        } // Manually calling handleTransitionEnd in that case as isn't otherwise.
-
-
-        if (indexCurrent === indexLatest) {
-          _this.handleTransitionEnd();
-        }
-      });
-    };
-
-    _this.handleTouchStart = function (event) {
-      if (_this.props.onTouchStart) {
-        _this.props.onTouchStart(event);
-      }
-
-      _this.handleSwipeStart(event);
-    };
-
-    _this.handleTouchEnd = function (event) {
-      if (_this.props.onTouchEnd) {
-        _this.props.onTouchEnd(event);
-      }
-
-      _this.handleSwipeEnd(event);
-    };
-
-    _this.handleMouseDown = function (event) {
-      if (_this.props.onMouseDown) {
-        _this.props.onMouseDown(event);
-      }
-
-      event.persist();
-
-      _this.handleSwipeStart(adaptMouse(event));
-    };
-
-    _this.handleMouseUp = function (event) {
-      if (_this.props.onMouseUp) {
-        _this.props.onMouseUp(event);
-      }
-
-      _this.handleSwipeEnd(adaptMouse(event));
-    };
-
-    _this.handleMouseLeave = function (event) {
-      if (_this.props.onMouseLeave) {
-        _this.props.onMouseLeave(event);
-      } // Filter out events
-
-
-      if (_this.started) {
-        _this.handleSwipeEnd(adaptMouse(event));
-      }
-    };
-
-    _this.handleMouseMove = function (event) {
-      if (_this.props.onMouseMove) {
-        _this.props.onMouseMove(event);
-      } // Filter out events
-
-
-      if (_this.started) {
-        _this.handleSwipeMove(adaptMouse(event));
-      }
-    };
-
-    _this.handleScroll = function (event) {
-      if (_this.props.onScroll) {
-        _this.props.onScroll(event);
-      } // Ignore events bubbling up.
-
-
-      if (event.target !== _this.rootNode) {
-        return;
-      }
-
-      if (_this.ignoreNextScrollEvents) {
-        _this.ignoreNextScrollEvents = false;
-        return;
-      }
-
-      var indexLatest = _this.state.indexLatest;
-      var indexNew = Math.ceil(event.target.scrollLeft / event.target.clientWidth) + indexLatest;
-      _this.ignoreNextScrollEvents = true; // Reset the scroll position.
-
-      event.target.scrollLeft = 0;
-
-      if (_this.props.onChangeIndex && indexNew !== indexLatest) {
-        _this.props.onChangeIndex(indexNew, indexLatest, {
-          reason: 'focus'
-        });
-      }
-    };
-
-    _this.updateHeight = function () {
-      if (_this.activeSlide !== null) {
-        var child = _this.activeSlide.children[0];
-
-        if (child !== undefined && child.offsetHeight !== undefined && _this.state.heightLatest !== child.offsetHeight) {
-          _this.setState({
-            heightLatest: child.offsetHeight
-          });
-        }
-      }
-    };
-
-    if (true) {
-      (0, _reactSwipeableViewsCore.checkIndexBounds)(props);
-    }
-
-    _this.state = {
-      indexLatest: props.index,
-      // Set to true as soon as the component is swiping.
-      // It's the state counter part of this.isSwiping.
-      isDragging: false,
-      // Help with SSR logic and lazy loading logic.
-      renderOnlyActive: !props.disableLazyLoading,
-      heightLatest: 0,
-      // Let the render method that we are going to display the same slide than previously.
-      displaySameSlide: true
-    };
-
-    _this.setIndexCurrent(props.index);
-
-    return _this;
-  }
-
-  (0, _createClass2.default)(SwipeableViews, [{
-    key: "getChildContext",
-    value: function getChildContext() {
-      var _this2 = this;
-
-      return {
-        swipeableViews: {
-          slideUpdateHeight: function slideUpdateHeight() {
-            _this2.updateHeight();
-          }
-        }
-      };
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this3 = this;
-
-      // Subscribe to transition end events.
-      this.transitionListener = addEventListener(this.containerNode, 'transitionend', function (event) {
-        if (event.target !== _this3.containerNode) {
-          return;
-        }
-
-        _this3.handleTransitionEnd();
-      }); // Block the thread to handle that event.
-
-      this.touchMoveListener = addEventListener(this.rootNode, 'touchmove', function (event) {
-        // Handling touch events is disabled.
-        if (_this3.props.disabled) {
-          return;
-        }
-
-        _this3.handleSwipeMove(event);
-      }, {
-        passive: false
-      });
-
-      if (!this.props.disableLazyLoading) {
-        this.firstRenderTimeout = setTimeout(function () {
-          _this3.setState({
-            renderOnlyActive: false
-          });
-        }, 0);
-      } // Send all functions in an object if action param is set.
-
-
-      if (this.props.action) {
-        this.props.action({
-          updateHeight: this.updateHeight
-        });
-      }
-    }
-  }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
-      var index = nextProps.index;
-
-      if (typeof index === 'number' && index !== this.props.index) {
-        if (true) {
-          (0, _reactSwipeableViewsCore.checkIndexBounds)(nextProps);
-        }
-
-        this.setIndexCurrent(index);
-        this.setState({
-          // If true, we are going to change the children. We shoudn't animate it.
-          displaySameSlide: (0, _reactSwipeableViewsCore.getDisplaySameSlide)(this.props, nextProps),
-          indexLatest: index
-        });
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.transitionListener.remove();
-      this.touchMoveListener.remove();
-      clearTimeout(this.firstRenderTimeout);
-    }
-  }, {
-    key: "setIndexCurrent",
-    value: function setIndexCurrent(indexCurrent) {
-      if (!this.props.animateTransitions && this.indexCurrent !== indexCurrent) {
-        this.handleTransitionEnd();
-      }
-
-      this.indexCurrent = indexCurrent;
-
-      if (this.containerNode) {
-        var axis = this.props.axis;
-        var transform = axisProperties.transform[axis](indexCurrent * 100);
-        this.containerNode.style.WebkitTransform = transform;
-        this.containerNode.style.transform = transform;
-      }
-    }
-  }, {
-    key: "handleTransitionEnd",
-    value: function handleTransitionEnd() {
-      if (!this.props.onTransitionEnd) {
-        return;
-      } // Filters out when changing the children
-
-
-      if (this.state.displaySameSlide) {
-        return;
-      } // The rest callback is triggered when swiping. It's just noise.
-      // We filter it out.
-
-
-      if (!this.state.isDragging) {
-        this.props.onTransitionEnd();
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this4 = this;
-
-      var _this$props2 = this.props,
-          action = _this$props2.action,
-          animateHeight = _this$props2.animateHeight,
-          animateTransitions = _this$props2.animateTransitions,
-          axis = _this$props2.axis,
-          children = _this$props2.children,
-          containerStyleProp = _this$props2.containerStyle,
-          disabled = _this$props2.disabled,
-          disableLazyLoading = _this$props2.disableLazyLoading,
-          enableMouseEvents = _this$props2.enableMouseEvents,
-          hysteresis = _this$props2.hysteresis,
-          ignoreNativeScroll = _this$props2.ignoreNativeScroll,
-          index = _this$props2.index,
-          onChangeIndex = _this$props2.onChangeIndex,
-          onSwitching = _this$props2.onSwitching,
-          onTransitionEnd = _this$props2.onTransitionEnd,
-          resistance = _this$props2.resistance,
-          slideStyleProp = _this$props2.slideStyle,
-          slideClassName = _this$props2.slideClassName,
-          springConfig = _this$props2.springConfig,
-          style = _this$props2.style,
-          threshold = _this$props2.threshold,
-          other = (0, _objectWithoutProperties2.default)(_this$props2, ["action", "animateHeight", "animateTransitions", "axis", "children", "containerStyle", "disabled", "disableLazyLoading", "enableMouseEvents", "hysteresis", "ignoreNativeScroll", "index", "onChangeIndex", "onSwitching", "onTransitionEnd", "resistance", "slideStyle", "slideClassName", "springConfig", "style", "threshold"]);
-      var _this$state = this.state,
-          displaySameSlide = _this$state.displaySameSlide,
-          heightLatest = _this$state.heightLatest,
-          indexLatest = _this$state.indexLatest,
-          isDragging = _this$state.isDragging,
-          renderOnlyActive = _this$state.renderOnlyActive;
-      var touchEvents = !disabled ? {
-        onTouchStart: this.handleTouchStart,
-        onTouchEnd: this.handleTouchEnd
-      } : {};
-      var mouseEvents = !disabled && enableMouseEvents ? {
-        onMouseDown: this.handleMouseDown,
-        onMouseUp: this.handleMouseUp,
-        onMouseLeave: this.handleMouseLeave,
-        onMouseMove: this.handleMouseMove
-      } : {}; // There is no point to animate if we are already providing a height.
-
-       true ? (0, _warning.default)(!animateHeight || !containerStyleProp || !containerStyleProp.height, "react-swipeable-view: You are setting animateHeight to true but you are\nalso providing a custom height.\nThe custom height has a higher priority than the animateHeight property.\nSo animateHeight is most likely having no effect at all.") : undefined;
-      var slideStyle = (0, _extends2.default)({}, styles.slide, slideStyleProp);
-      var transition;
-      var WebkitTransition;
-
-      if (isDragging || !animateTransitions || displaySameSlide) {
-        transition = 'all 0s ease 0s';
-        WebkitTransition = 'all 0s ease 0s';
-      } else {
-        transition = createTransition('transform', springConfig);
-        WebkitTransition = createTransition('-webkit-transform', springConfig);
-
-        if (heightLatest !== 0) {
-          var additionalTranstion = ", ".concat(createTransition('height', springConfig));
-          transition += additionalTranstion;
-          WebkitTransition += additionalTranstion;
-        }
-      }
-
-      var containerStyle = {
-        height: null,
-        WebkitFlexDirection: axisProperties.flexDirection[axis],
-        flexDirection: axisProperties.flexDirection[axis],
-        WebkitTransition: WebkitTransition,
-        transition: transition
-      }; // Apply the styles for SSR considerations
-
-      if (!renderOnlyActive) {
-        var transform = axisProperties.transform[axis](this.indexCurrent * 100);
-        containerStyle.WebkitTransform = transform;
-        containerStyle.transform = transform;
-      }
-
-      if (animateHeight) {
-        containerStyle.height = heightLatest;
-      }
-
-      return _react.default.createElement("div", (0, _extends2.default)({
-        ref: this.setRootNode,
-        style: (0, _extends2.default)({}, axisProperties.root[axis], style)
-      }, other, touchEvents, mouseEvents, {
-        onScroll: this.handleScroll
-      }), _react.default.createElement("div", {
-        ref: this.setContainerNode,
-        style: (0, _extends2.default)({}, containerStyle, styles.container, containerStyleProp),
-        className: "react-swipeable-view-container"
-      }, _react.default.Children.map(children, function (child, indexChild) {
-        if (renderOnlyActive && indexChild !== indexLatest) {
-          return null;
-        }
-
-         true ? (0, _warning.default)(_react.default.isValidElement(child), "react-swipeable-view: one of the children provided is invalid: ".concat(child, ".\nWe are expecting a valid React Element")) : undefined;
-        var ref;
-        var hidden = true;
-
-        if (indexChild === indexLatest) {
-          hidden = false;
-
-          if (animateHeight) {
-            ref = _this4.setActiveSlide;
-            slideStyle.overflowY = 'hidden';
-          }
-        }
-
-        return _react.default.createElement("div", {
-          ref: ref,
-          style: slideStyle,
-          className: slideClassName,
-          "aria-hidden": hidden,
-          "data-swipeable": "true"
-        }, child);
-      })));
-    }
-  }]);
-  return SwipeableViews;
-}(_react.default.Component); // Added as an ads for people using the React dev tools in production.
-// So they know, the tool used to build the awesome UI they
-// are looking at/retro engineering.
-
-
-SwipeableViews.displayName = 'ReactSwipableView';
-SwipeableViews.propTypes =  true ? {
-  /**
-   * This is callback property. It's called by the component on mount.
-   * This is useful when you want to trigger an action programmatically.
-   * It currently only supports updateHeight() action.
-   *
-   * @param {object} actions This object contains all posible actions
-   * that can be triggered programmatically.
-   */
-  action: _propTypes.default.func,
-
-  /**
-   * If `true`, the height of the container will be animated to match the current slide height.
-   * Animating another style property has a negative impact regarding performance.
-   */
-  animateHeight: _propTypes.default.bool,
-
-  /**
-   * If `false`, changes to the index prop will not cause an animated transition.
-   */
-  animateTransitions: _propTypes.default.bool,
-
-  /**
-   * The axis on which the slides will slide.
-   */
-  axis: _propTypes.default.oneOf(['x', 'x-reverse', 'y', 'y-reverse']),
-
-  /**
-   * Use this property to provide your slides.
-   */
-  children: _propTypes.default.node.isRequired,
-
-  /**
-   * This is the inlined style that will be applied
-   * to each slide container.
-   */
-  containerStyle: _propTypes.default.object,
-
-  /**
-   * If `true`, it will disable touch events.
-   * This is useful when you want to prohibit the user from changing slides.
-   */
-  disabled: _propTypes.default.bool,
-
-  /**
-   * This is the config used to disable lazyloding,
-   * if `true` will render all the views in first rendering.
-   */
-  disableLazyLoading: _propTypes.default.bool,
-
-  /**
-   * If `true`, it will enable mouse events.
-   * This will allow the user to perform the relevant swipe actions with a mouse.
-   */
-  enableMouseEvents: _propTypes.default.bool,
-
-  /**
-   * Configure hysteresis between slides. This value determines how far
-   * should user swipe to switch slide.
-   */
-  hysteresis: _propTypes.default.number,
-
-  /**
-   * If `true`, it will ignore native scroll container.
-   * It can be used to filter out false positive that blocks the swipe.
-   */
-  ignoreNativeScroll: _propTypes.default.bool,
-
-  /**
-   * This is the index of the slide to show.
-   * This is useful when you want to change the default slide shown.
-   * Or when you have tabs linked to each slide.
-   */
-  index: _propTypes.default.number,
-
-  /**
-   * This is callback prop. It's call by the
-   * component when the shown slide change after a swipe made by the user.
-   * This is useful when you have tabs linked to each slide.
-   *
-   * @param {integer} index This is the current index of the slide.
-   * @param {integer} indexLatest This is the oldest index of the slide.
-   * @param {object} meta Meta data containing more information about the event.
-   */
-  onChangeIndex: _propTypes.default.func,
-
-  /**
-   * @ignore
-   */
-  onMouseDown: _propTypes.default.func,
-
-  /**
-   * @ignore
-   */
-  onMouseLeave: _propTypes.default.func,
-
-  /**
-   * @ignore
-   */
-  onMouseMove: _propTypes.default.func,
-
-  /**
-   * @ignore
-   */
-  onMouseUp: _propTypes.default.func,
-
-  /**
-   * @ignore
-   */
-  onScroll: _propTypes.default.func,
-
-  /**
-   * This is callback prop. It's called by the
-   * component when the slide switching.
-   * This is useful when you want to implement something corresponding
-   * to the current slide position.
-   *
-   * @param {integer} index This is the current index of the slide.
-   * @param {string} type Can be either `move` or `end`.
-   */
-  onSwitching: _propTypes.default.func,
-
-  /**
-   * @ignore
-   */
-  onTouchEnd: _propTypes.default.func,
-
-  /**
-   * @ignore
-   */
-  onTouchMove: _propTypes.default.func,
-
-  /**
-   * @ignore
-   */
-  onTouchStart: _propTypes.default.func,
-
-  /**
-   * The callback that fires when the animation comes to a rest.
-   * This is useful to defer CPU intensive task.
-   */
-  onTransitionEnd: _propTypes.default.func,
-
-  /**
-   * If `true`, it will add bounds effect on the edges.
-   */
-  resistance: _propTypes.default.bool,
-
-  /**
-   * This is the className that will be applied
-   * on the slide component.
-   */
-  slideClassName: _propTypes.default.string,
-
-  /**
-   * This is the inlined style that will be applied
-   * on the slide component.
-   */
-  slideStyle: _propTypes.default.object,
-
-  /**
-   * This is the config used to create CSS transitions.
-   * This is useful to change the dynamic of the transition.
-   */
-  springConfig: _propTypes.default.shape({
-    delay: _propTypes.default.string,
-    duration: _propTypes.default.string,
-    easeFunction: _propTypes.default.string
-  }),
-
-  /**
-   * This is the inlined style that will be applied
-   * on the root component.
-   */
-  style: _propTypes.default.object,
-
-  /**
-   * This is the threshold used for detecting a quick swipe.
-   * If the computed speed is above this value, the index change.
-   */
-  threshold: _propTypes.default.number
-} : undefined;
-SwipeableViews.defaultProps = {
-  animateHeight: false,
-  animateTransitions: true,
-  axis: 'x',
-  disabled: false,
-  disableLazyLoading: false,
-  enableMouseEvents: false,
-  hysteresis: 0.6,
-  ignoreNativeScroll: false,
-  index: 0,
-  threshold: 5,
-  springConfig: {
-    duration: '0.35s',
-    easeFunction: 'cubic-bezier(0.15, 0.3, 0.25, 1)',
-    delay: '0s'
-  },
-  resistance: false
-};
-SwipeableViews.childContextTypes = {
-  swipeableViews: _propTypes.default.shape({
-    slideUpdateHeight: _propTypes.default.func
-  })
-};
-var _default = SwipeableViews;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/lib/index.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/react-swipeable-views/lib/index.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _SwipeableViews = _interopRequireDefault(__webpack_require__(/*! ./SwipeableViews */ "./node_modules/react-swipeable-views/lib/SwipeableViews.js"));
-
-var _default = _SwipeableViews.default;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/assertThisInitialized.js":
-/*!*********************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/classCallCheck.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/classCallCheck.js ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/createClass.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/createClass.js ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/extends.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/extends.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _extends() {
-  module.exports = _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-module.exports = _extends;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/getPrototypeOf.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/inherits.js":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/inherits.js ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!*********************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/objectWithoutProperties.js":
-/*!***********************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
-  \***********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js");
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutProperties;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js":
-/*!****************************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
-  \****************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutPropertiesLoose;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
-/*!*************************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \*************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/typeof.js");
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/setPrototypeOf.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-module.exports = _setPrototypeOf;
-
-/***/ }),
-
-/***/ "./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/typeof.js":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/react-swipeable-views/node_modules/@babel/runtime/helpers/typeof.js ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
 
 /***/ }),
 
@@ -72907,74 +70138,6 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/shallow-equal/dist/index.esm.js":
-/*!******************************************************!*\
-  !*** ./node_modules/shallow-equal/dist/index.esm.js ***!
-  \******************************************************/
-/*! exports provided: shallowEqualArrays, shallowEqualObjects */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shallowEqualArrays", function() { return shallowEqualArrays; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shallowEqualObjects", function() { return shallowEqualObjects; });
-function shallowEqualObjects(objA, objB) {
-  if (objA === objB) {
-    return true;
-  }
-
-  if (!objA || !objB) {
-    return false;
-  }
-
-  var aKeys = Object.keys(objA);
-  var bKeys = Object.keys(objB);
-  var len = aKeys.length;
-
-  if (bKeys.length !== len) {
-    return false;
-  }
-
-  for (var i = 0; i < len; i++) {
-    var key = aKeys[i];
-
-    if (objA[key] !== objB[key] || !Object.prototype.hasOwnProperty.call(objB, key)) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-function shallowEqualArrays(arrA, arrB) {
-  if (arrA === arrB) {
-    return true;
-  }
-
-  if (!arrA || !arrB) {
-    return false;
-  }
-
-  var len = arrA.length;
-
-  if (arrB.length !== len) {
-    return false;
-  }
-
-  for (var i = 0; i < len; i++) {
-    if (arrA[i] !== arrB[i]) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-
-
-
-/***/ }),
-
 /***/ "./node_modules/symbol-observable/es/index.js":
 /*!****************************************************!*\
   !*** ./node_modules/symbol-observable/es/index.js ***!
@@ -73146,80 +70309,6 @@ function valueEqual(a, b) {
 
 /***/ }),
 
-/***/ "./node_modules/warning/warning.js":
-/*!*****************************************!*\
-  !*** ./node_modules/warning/warning.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var __DEV__ = "development" !== 'production';
-
-var warning = function() {};
-
-if (__DEV__) {
-  var printWarning = function printWarning(format, args) {
-    var len = arguments.length;
-    args = new Array(len > 1 ? len - 1 : 0);
-    for (var key = 1; key < len; key++) {
-      args[key - 1] = arguments[key];
-    }
-    var argIndex = 0;
-    var message = 'Warning: ' +
-      format.replace(/%s/g, function() {
-        return args[argIndex++];
-      });
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  }
-
-  warning = function(condition, format, args) {
-    var len = arguments.length;
-    args = new Array(len > 2 ? len - 2 : 0);
-    for (var key = 2; key < len; key++) {
-      args[key - 2] = arguments[key];
-    }
-    if (format === undefined) {
-      throw new Error(
-          '`warning(condition, format, ...args)` requires a warning ' +
-          'message argument'
-      );
-    }
-    if (!condition) {
-      printWarning.apply(null, [format].concat(args));
-    }
-  };
-}
-
-module.exports = warning;
-
-
-/***/ }),
-
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -73384,17 +70473,6 @@ var Card = function Card(_ref) {
 
 /***/ }),
 
-/***/ "./src/components/Favorites.jsx":
-/*!**************************************!*\
-  !*** ./src/components/Favorites.jsx ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ "./src/components/Home.jsx":
 /*!*********************************!*\
   !*** ./src/components/Home.jsx ***!
@@ -73404,19 +70482,145 @@ var Card = function Card(_ref) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SingleLineGridList; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_swipeable_views__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-swipeable-views */ "./node_modules/react-swipeable-views/lib/index.js");
-/* harmony import */ var react_swipeable_views__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_swipeable_views__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_swipeable_views_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-swipeable-views-utils */ "./node_modules/react-swipeable-views-utils/lib/index.js");
-/* harmony import */ var react_swipeable_views_utils__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_swipeable_views_utils__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
+/* harmony import */ var _material_ui_core_GridList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/GridList */ "./node_modules/@material-ui/core/esm/GridList/index.js");
+/* harmony import */ var _material_ui_core_GridListTile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/GridListTile */ "./node_modules/@material-ui/core/esm/GridListTile/index.js");
+/* harmony import */ var _material_ui_core_GridListTileBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/GridListTileBar */ "./node_modules/@material-ui/core/esm/GridListTileBar/index.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/index.js");
+/* harmony import */ var _material_ui_icons_StarBorder__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/StarBorder */ "./node_modules/@material-ui/icons/StarBorder.js");
+/* harmony import */ var _material_ui_icons_StarBorder__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_StarBorder__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 
 
 
-var AutoPlaySwipeableViews = Object(react_swipeable_views_utils__WEBPACK_IMPORTED_MODULE_2__["autoPlay"])(react_swipeable_views__WEBPACK_IMPORTED_MODULE_1___default.a);
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hola"));
+
+
+
+
+
+/* import tileData from './tileData';
+
+ */
+
+var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(function (theme) {
+  return {
+    root: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-around',
+      overflow: 'hidden',
+      backgroundColor: 'transparent'
+    },
+    gridList: {
+      flexWrap: 'nowrap',
+      // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+      transform: 'translateZ(0)'
+    },
+    title: {
+      color: theme.palette.primary.light
+    },
+    titleBar: {
+      background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)'
+    }
+  };
 });
+/* import image from 'path/to/image.jpg';
+ */
+
+var tileData = [{
+  img: "https://i.ytimg.com/vi/1uq5eJHwio4/maxresdefault.jpg",
+  title: 'Image',
+  author: 'author'
+}, {
+  img: "https://i.ytimg.com/vi/1uq5eJHwio4/maxresdefault.jpg",
+  title: 'Image',
+  author: 'author'
+}, {
+  img: "https://i.ytimg.com/vi/1uq5eJHwio4/maxresdefault.jpg",
+  title: 'Image',
+  author: 'author'
+}, {
+  img: "https://i.ytimg.com/vi/1uq5eJHwio4/maxresdefault.jpg",
+  title: 'Image',
+  author: 'author'
+}, {
+  img: "https://i.ytimg.com/vi/1uq5eJHwio4/maxresdefault.jpg",
+  title: 'Image',
+  author: 'author'
+}];
+function SingleLineGridList() {
+  var classes = useStyles();
+  var user = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useSelector"])(function (state) {
+    return state.user;
+  });
+  console.log(user);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "containerCarousels"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      display: 'flex',
+      padding: '10px',
+      flexDirection: 'column',
+      backgroundColor: 'black'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Para Ni\xF1os"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.root
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_GridList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    className: classes.gridList,
+    cols: 2.5
+  }, tileData.map(function (tile) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_GridListTile__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      key: tile.img
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: tile.img,
+      alt: tile.title
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_GridListTileBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      title: tile.title,
+      classes: {
+        root: classes.titleBar,
+        title: classes.title
+      },
+      actionIcon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        "aria-label": "star ".concat(tile.title)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_StarBorder__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        className: classes.title
+      }))
+    }));
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      display: 'flex',
+      padding: '10px',
+      flexDirection: 'column',
+      backgroundColor: 'black'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Para Ni\xF1os"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.root
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_GridList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    className: classes.gridList,
+    cols: 2.5
+  }, tileData.map(function (tile) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_GridListTile__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      key: tile.img
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: tile.img,
+      alt: tile.title
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_GridListTileBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      title: tile.title,
+      classes: {
+        root: classes.titleBar,
+        title: classes.title
+      },
+      actionIcon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        "aria-label": "star ".concat(tile.title)
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_StarBorder__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        className: classes.title
+      }))
+    }));
+  })))));
+}
 
 /***/ }),
 
@@ -73429,12 +70633,227 @@ var AutoPlaySwipeableViews = Object(react_swipeable_views_utils__WEBPACK_IMPORTE
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SignIn; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/Avatar */ "./node_modules/@material-ui/core/esm/Avatar/index.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
+/* harmony import */ var _material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/CssBaseline */ "./node_modules/@material-ui/core/esm/CssBaseline/index.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/index.js");
+/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Grid */ "./node_modules/@material-ui/core/esm/Grid/index.js");
+/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Box */ "./node_modules/@material-ui/core/esm/Box/index.js");
+/* harmony import */ var _material_ui_icons_LockOutlined__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/LockOutlined */ "./node_modules/@material-ui/icons/LockOutlined.js");
+/* harmony import */ var _material_ui_icons_LockOutlined__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_LockOutlined__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
+/* harmony import */ var _state_user__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../state/user */ "./src/state/user.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _views_Loading__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../views/Loading */ "./src/views/Loading.jsx");
+/* harmony import */ var _utils_errFront__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../utils/errFront */ "./src/utils/errFront.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "LOGIN"));
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_9__["makeStyles"])(function (theme) {
+  return {
+    paper: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      backgroundColor: 'white',
+      borderRadius: 12,
+      height: "100%",
+      boxShadow: "2px 2px 2px black",
+      width: "100%"
+    },
+    avatar: {
+      margin: theme.spacing(1),
+      backgroundColor: "#fdd835"
+    },
+    form: {
+      width: "100%",
+      // Fix IE 11 issue.
+      marginTop: theme.spacing(3)
+    },
+    submit: {
+      margin: theme.spacing(3, 0, 2),
+      width: "50%",
+      marginLeft: "25%"
+    },
+    root: {
+      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#fdd835"
+      },
+      "& .MuiInputLabel-outlined": {
+        color: "#fdd835"
+      }
+    },
+    input: {
+      color: "black",
+      fontSize: "17px",
+      autoComplete: "off",
+      backgroundColor: "transparent",
+      autocomplete: false
+    }
+  };
 });
+function SignIn() {
+  var classes = useStyles();
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_11__["useDispatch"])();
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      loading = _React$useState2[0],
+      setLoading = _React$useState2[1];
+
+  var history = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_12__["useHistory"])();
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(0),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      activeStep = _React$useState4[0],
+      setActiveStep = _React$useState4[1];
+
+  var _React$useState5 = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({
+    email: "",
+    password: ""
+  }),
+      _React$useState6 = _slicedToArray(_React$useState5, 2),
+      user = _React$useState6[0],
+      setUser = _React$useState6[1];
+
+  var _React$useState7 = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({}),
+      _React$useState8 = _slicedToArray(_React$useState7, 2),
+      errorRegisterFront = _React$useState8[0],
+      setErrorRegisterFront = _React$useState8[1];
+
+  var handleOnChange = function handleOnChange(event) {
+    var _event$target = event.target,
+        name = _event$target.name,
+        value = _event$target.value;
+    console.log(name, value);
+    setUser(_objectSpread(_objectSpread({}, user), {}, _defineProperty({}, name, value)));
+  };
+
+  var classInput = {
+    email: "",
+    password: ""
+  };
+  errorRegisterFront.email ? classInput.email = classes.root : null;
+  errorRegisterFront.password ? classInput.password = classes.root : null;
+
+  var handleOnSubmit = function handleOnSubmit(e) {
+    e.preventDefault();
+    setErrorRegisterFront({});
+    var objError = Object(_utils_errFront__WEBPACK_IMPORTED_MODULE_14__["errForm"])('s', 's', user.email, user.password);
+
+    if (Object.keys(objError).length) {
+      setErrorRegisterFront(objError);
+    } //aca solo hacer handleNext y recien al final enviar toda la informacion
+
+
+    if (Object.keys(objError).length == 0) {
+      console.log(user);
+      setLoading(true);
+      dispatch(Object(_state_user__WEBPACK_IMPORTED_MODULE_10__["userLoggin"])(user)).then(function () {
+        return setLoading(false);
+      }).then(function () {
+        return history.push("/");
+      });
+    }
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "containerMayor"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "containerPaper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_3__["default"], null), loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_views_Loading__WEBPACK_IMPORTED_MODULE_13__["default"], null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: classes.paper
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    className: classes.avatar
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_LockOutlined__WEBPACK_IMPORTED_MODULE_7___default.a, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    component: "h1",
+    variant: "h5"
+  }, "Load your Data"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: classes.form,
+    noValidate: true,
+    onSubmit: function onSubmit(e) {
+      return handleOnSubmit(e);
+    },
+    autocomplete: "off"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    container: true,
+    spacing: 2
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    item: true,
+    xs: 12
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: classInput.email,
+    InputProps: {
+      className: classes.input
+    },
+    variant: "outlined",
+    autocomplete: "false",
+    fullWidth: true,
+    id: "email",
+    label: "Email Address",
+    name: "email",
+    onChange: handleOnChange
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    item: true,
+    xs: 12
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: classes.password,
+    InputProps: {
+      className: classes.input
+    },
+    variant: "outlined",
+    fullWidth: true,
+    name: "password",
+    label: "Password",
+    type: "password",
+    id: "password",
+    autoComplete: "false",
+    onChange: handleOnChange
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    type: "submit",
+    variant: "contained",
+    color: "primary",
+    className: classes.submit,
+    onClick: function onClick(e) {
+      handleOnSubmit(e);
+    }
+  }))))));
+}
 
 /***/ }),
 
@@ -73453,10 +70872,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Login */ "./src/components/Login.jsx");
-/* harmony import */ var _Favorites__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Favorites */ "./src/components/Favorites.jsx");
-/* harmony import */ var _Favorites__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Favorites__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _favorites__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./favorites */ "./src/components/favorites.jsx");
+/* harmony import */ var _favorites__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_favorites__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _Movies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Movies */ "./src/components/Movies.jsx");
-/* harmony import */ var _Movie__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Movie */ "./src/components/Movie.jsx");
+/* harmony import */ var _movie__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./movie */ "./src/components/movie.jsx");
 /* harmony import */ var _Register__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Register */ "./src/components/Register.jsx");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./User */ "./src/components/User.jsx");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_User__WEBPACK_IMPORTED_MODULE_8__);
@@ -73495,7 +70914,7 @@ function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/movie/:id",
     render: function render(props) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Movie__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_movie__WEBPACK_IMPORTED_MODULE_6__["default"], {
         movieId: props.match.params.id
       });
     }
@@ -73507,54 +70926,6 @@ function App() {
     component: _Login__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), " "));
 }
-
-/***/ }),
-
-/***/ "./src/components/Movie.jsx":
-/*!**********************************!*\
-  !*** ./src/components/Movie.jsx ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _state_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../state/user */ "./src/state/user.js");
-/* harmony import */ var _localStorage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../localStorage */ "./src/localStorage.js");
-/* harmony import */ var _NavbarContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavbarContainer */ "./src/components/NavbarContainer.jsx");
-/* harmony import */ var _state_movie__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../state/movie */ "./src/state/movie.js");
-
-
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var movieId = _ref.movieId;
-  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
-  var movie = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(function (state) {
-    return state.movie;
-  });
-  react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](function () {
-    dispatch(Object(_state_movie__WEBPACK_IMPORTED_MODULE_6__["fetchSingleMovie"])(movieId));
-  }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-    className: "cardSingleMovie"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-    className: "imageSingleMovie"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("img", {
-    src: movie.Poster
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-    className: "cardContent"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
-    className: "Actors"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h4", null, "Actors : ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, movie.Actors), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null)));
-});
 
 /***/ }),
 
@@ -73971,10 +71342,16 @@ function NavbarContainer() {
     className: classes.grow
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classes.sectionDesktop
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    style: {
+      textDecoration: "none",
+      color: "white"
+    },
+    to: "/login"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_14__["default"], {
     color: "primary",
     className: classes.root
-  }, "LOGIN"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+  }, "LOGIN")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
     style: {
       textDecoration: "none",
       color: "white"
@@ -74082,9 +71459,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_10__["m
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),url(".concat("https://images.pexels.com/photos/2398354/pexels-photo-2398354.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", ")"),
-      backgroundSize: "cover",
-      backgroundPosition: "center",
+      backgroundColor: 'white',
       borderRadius: 12,
       height: "100%",
       boxShadow: "2px 2px 2px black",
@@ -74113,7 +71488,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_10__["m
       }
     },
     input: {
-      color: "white",
+      color: "black",
       fontSize: "17px",
       autoComplete: "off",
       backgroundColor: "transparent",
@@ -74338,6 +71713,114 @@ function SignUp() {
 
 /***/ }),
 
+/***/ "./src/components/favorites.jsx":
+/*!**************************************!*\
+  !*** ./src/components/favorites.jsx ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./src/components/movie.jsx":
+/*!**********************************!*\
+  !*** ./src/components/movie.jsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _views_Review__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/Review */ "./src/views/Review.jsx");
+/* harmony import */ var _state_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../state/user */ "./src/state/user.js");
+/* harmony import */ var _localStorage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../localStorage */ "./src/localStorage.js");
+/* harmony import */ var _NavbarContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./NavbarContainer */ "./src/components/NavbarContainer.jsx");
+/* harmony import */ var _state_movie__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../state/movie */ "./src/state/movie.js");
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var movieId = _ref.movieId;
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useDispatch"])();
+  var movie = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(function (state) {
+    return state.movie;
+  });
+  react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](function () {
+    dispatch(Object(_state_movie__WEBPACK_IMPORTED_MODULE_7__["fetchSingleMovie"])(movieId));
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "cardSingleMovie"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "imageSingleMovie"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("img", {
+    src: movie.Poster
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "cardContent"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "movieTitle"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", {
+    className: "movie__title"
+  }, movie.Title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "descripciones"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "description"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h3", {
+    className: "description__plot"
+  }, movie.Plot)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "description"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h3", {
+    className: "description__plot"
+  }, movie.Actors))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "RatingCard"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_views_Review__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    rating: Math.floor(movie.imdbRating / 2)
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "year"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, movie.Year)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "year"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, movie.Runtime)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
+    className: "year"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", null, movie.Country)))));
+});
+/* Actors: "Bruce Greenwood, Hayden Panettiere, Caspar Poyck, Gary Bullock"
+Awards: "3 nominations."
+BoxOffice: "$49,772,522"
+Country: "USA"
+DVD: "22 Jul 2009"
+Director: "Frederik Du Chau"
+Genre: "Adventure, Comedy, Drama, Family, Sport"
+Language: "English"
+Metascore: "43"
+Plot: "An abandoned zebra grows up believing he is a racehorse, and, with the help of his barnyard friends and a teenage girl, sets out to achieve his dream of racing with thoroughbreds."
+Poster: "https://m.media-amazon.com/images/M/MV5BMjE0NDA2MTQwM15BMl5BanBnXkFtZTcwMzYxNDcyMQ@@._V1_SX300.jpg"
+Production: "Alcon Entertainment"
+Rated: "PG"
+Ratings: (3) [{…}, {…}, {…}]
+Released: "14 Jan 2005"
+Response: "True"
+Runtime: "102 min"
+Title: "Racing Stripes"
+Type: "movie"
+Website: "N/A"
+Writer: "David Schmidt (story), Steven P. Wegner (story), Kirk DeMicco (story), Frederik Du Chau (story), David Schmidt (screenplay)"
+Year: "2005"
+imdbID: "tt0376105"
+imdbRating: "5.2"
+imdbVotes: "16,128" */
+
+/***/ }),
+
 /***/ "./src/constants/movie.js":
 /*!********************************!*\
   !*** ./src/constants/movie.js ***!
@@ -74446,12 +71929,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadState", function() { return loadState; });
 var saveState = function saveState(state) {
   try {
-    localStorage.setItem("setUser", JSON.stringify(state));
+    localStorage.setItem("user", JSON.stringify(state));
   } catch (_unused) {}
 };
 var loadState = function loadState(state) {
   try {
-    var serializedState = localStorage.getItem("setUser");
+    var serializedState = localStorage.getItem("user");
 
     if (serializedState === null) {
       return undefined;
@@ -74567,12 +72050,13 @@ var store = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__["configureStore
 /*!***************************!*\
   !*** ./src/state/user.js ***!
   \***************************/
-/*! exports provided: userRegister, fetchMe, clearUser, default */
+/*! exports provided: userRegister, userLoggin, fetchMe, clearUser, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userRegister", function() { return userRegister; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "userLoggin", function() { return userLoggin; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchMe", function() { return fetchMe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearUser", function() { return clearUser; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
@@ -74592,20 +72076,22 @@ var userRegister = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__["createA
   return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/user/register", user);
 });
 var userLoggin = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__["createAsyncThunk"])(_constants_user__WEBPACK_IMPORTED_MODULE_3__["USER_LOGGIN"], function (user) {
+  console.log("asasd");
   return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/user/loggin", user).then(function (res) {
     Object(_localStorage__WEBPACK_IMPORTED_MODULE_2__["saveState"])(res.data);
     return res.data;
   });
 });
-var fetchMe = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__["createAsyncThunk"])(_constants_user__WEBPACK_IMPORTED_MODULE_3__["FETCH_ME"], function (user) {
+var fetchMe = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__["createAsyncThunk"])(_constants_user__WEBPACK_IMPORTED_MODULE_3__["FETCH_ME"], function () {
   var token = Object(_localStorage__WEBPACK_IMPORTED_MODULE_2__["loadState"])("setUser").token;
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/users/me", {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/user/me", {
     headers: {
       Authorization: "".concat(token)
     }
   }).then(function (res) {
-    return res.data;
+    return console.log(res.data);
   }).then(function (data) {
+    console.log;
     return {
       data: data,
       token: token
@@ -74613,9 +72099,7 @@ var fetchMe = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__["createAsyncT
   });
 });
 var clearUser = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_user__WEBPACK_IMPORTED_MODULE_3__["CLEAR_USER"]);
-var userReducer = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__["createReducer"])([], (_createReducer = {}, _defineProperty(_createReducer, userRegister.fullfiled, function (state, action) {
-  return action.payload;
-}), _defineProperty(_createReducer, userLoggin.fullfiled, function (state, action) {
+var userReducer = Object(_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__["createReducer"])({}, (_createReducer = {}, _defineProperty(_createReducer, userLoggin.fullfiled, function (state, action) {
   return action.payload;
 }), _defineProperty(_createReducer, fetchMe.fullfiled, function (state, action) {
   return action.payload;
@@ -74822,7 +72306,9 @@ var Congratulations = function Congratulations(_ref) {
     className: "cardHeader"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Welcome To Omdb ", user.firstName)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "cardContent2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/login"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "buttonsCongratulations"
   }, "Login")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/"

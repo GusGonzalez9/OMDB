@@ -224,9 +224,14 @@ export default function NavbarContainer() {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
+          <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/login"
+            >
             <Button color="primary" className={classes.root}>
               LOGIN
             </Button>
+            </Link>
             <Link
               style={{ textDecoration: "none", color: "white" }}
               to="/Register"
