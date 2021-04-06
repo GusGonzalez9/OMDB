@@ -14,13 +14,13 @@ const generateNewToken = (user) => {
     { algorithm: "HS256" }
   );
 };
-
+//no me funciona el jwt.verify
 const userAuthenticate = async (req, res, next) => {
   let Token = req.headers.authorization.slice(7);
-
   try {
-    let decoded = jwt.verify(Token, privateKey);
-
+  
+    let decoded =  jwt.verify(Token,privateKey)
+    
     let user = await User.findOne({ where: { email: decoded.email } });
     if (user) {
       req.user = user;

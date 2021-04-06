@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 const db = new Sequelize(
-  "postgres://postgres:gustihero@localhost:5433/omdb2",
+  "postgres://@localhost:5432/omdb2",
 
   { dialect: "postgres", logging: false }
 );

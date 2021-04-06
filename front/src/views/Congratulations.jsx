@@ -14,7 +14,7 @@ const Congratulations = ({ user, avatar }) => {
         <h3>Welcome To Omdb {user.firstName}</h3>
       </div>
       <div className="cardContent2">
-        <Link>
+        <Link to="/login">
           <button className="buttonsCongratulations">Login</button>
         </Link>
 
