@@ -17,22 +17,21 @@ import { errForm } from "../utils/errFront";
 import Paso from "../views/Paso";
 import Character from "../views/Character";
 import Congratulations from "../views/Congratulations";
-/* import Image from "../image";
- */ const useStyles = makeStyles((theme) => ({
+ const useStyles = makeStyles((theme) => ({
   paper: {
     /*     marginTop: theme.spacing(8),
      */ display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundColor:'white',
+    backgroundColor:'#eddcd2',
     borderRadius: 12,
-    height: "100%",
+    height: "80%",
     boxShadow: "2px 2px 2px black",
     width: "100%",
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: "#fdd835",
+    backgroundColor: "#370617",
   },
   form: {
     width: "100%", // Fix IE 11 issue.
@@ -40,15 +39,15 @@ import Congratulations from "../views/Congratulations";
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    width: "50%",
-    marginLeft: "25%",
+    width: "25%",
+   
   },
   root: {
     "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-      borderColor: "#fdd835",
+      borderColor: "#370617",
     },
     "& .MuiInputLabel-outlined": {
-      color: "#fdd835",
+      color: "#370617",
     },
   },
   input: {
@@ -210,9 +209,12 @@ export default function SignUp() {
                       />
                     </Grid>
                   </Grid>
-                  <Button
+                 
+                </form>
+                <Button
                     type="submit"
                     variant="contained"
+                  
                     color="primary"
                     className={classes.submit}
                     onClick={(e) => {
@@ -221,7 +223,6 @@ export default function SignUp() {
                   >
                     Continue
                   </Button>
-                </form>
               </div>
             ) : (
               <>

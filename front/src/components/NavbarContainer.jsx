@@ -23,7 +23,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
 import { fetchMovies } from "../state/movies";
 import LocalMoviesIcon from "@material-ui/icons/LocalMovies";
-
+import {clearUser} from '../state/user'
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -113,6 +113,7 @@ export default function NavbarContainer() {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const [movie, setMovies] = React.useState("");
   const history = useHistory();
+  const user = useSelector(state => state.user)
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -169,13 +170,16 @@ export default function NavbarContainer() {
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
-    >
+    > <Link to="/login" style={{textDecoration:'none'}}>
       <MenuItem>
-        <p className={classes.items}>LOGIN</p>
+        <p className={classes.items}>LOGIN</p>  
       </MenuItem>
+      </Link>
+      <Link to="/Register" style={{textDecoration:'none'}}>
       <MenuItem>
-        <p className={classes.items}>REGISTER</p>
+        <p className={classes.items}>REGISTER</p>  
       </MenuItem>
+      </Link>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -189,10 +193,12 @@ export default function NavbarContainer() {
       </MenuItem>
     </Menu>
   );
-
+const setearLogout = ()=>{
+  dispatch(clearUser())
+}
   return (
     <div className={classes.grow}>
-      <AppBar position="relative" style={{ backgroundColor: "#000000" }}>
+      <AppBar position="relative" style={{ backgroundColor: "#370617" }}>
         <Toolbar>
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
             <LocalMoviesIcon />
@@ -224,22 +230,35 @@ export default function NavbarContainer() {
 
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-          <Link
-              style={{ textDecoration: "none", color: "white" }}
-              to="/login"
-            >
-            <Button color="primary" className={classes.root}>
-              LOGIN
-            </Button>
-            </Link>
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              to="/Register"
-            >
-              <Button color="primary" className={classes.root}>
-                REGISTER
+            {user && !user.user? (
+              
+              <>
+
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/login"
+                >
+                  <Button color="primary" className={classes.root}>
+                    LOGIN
+                  </Button>
+                </Link>
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/Register"
+                >
+                  <Button color="primary" className={classes.root}>
+                    REGISTER
+                  </Button>
+                </Link>
+              </>
+            ) : (
+              <div style={{display:'flex' , justifyContent:'space-between', alignItems:'center'}}>
+                <span style={{color:'white', fontSize:'20px', marginRight:'2%',width:'75%'}}>Welcome {user.user.firstName}!</span>
+              <Button color="primary" className={classes.root} onClick={()=> setearLogout()}>
+                LOGOUT
               </Button>
-            </Link>
+              </div>
+            )}
 
             <IconButton
               edge="end"
