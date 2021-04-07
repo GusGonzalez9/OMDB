@@ -4,7 +4,7 @@ import {
   createAsyncThunk,
   createAction,
 } from "@reduxjs/toolkit";
-import { saveState, loadState } from "../localStorage";
+import { saveState, loadState ,RemoveItem} from "../localStorage";
 import {
   USER_LOGGIN,
   USER_REGISTER,
@@ -16,9 +16,9 @@ export const userRegister = createAsyncThunk(USER_REGISTER, (user) => {
   return axios.post("/api/user/register", user);
 });
 
-export const userLoggin = createAsyncThunk(USER_LOGGIN, user => {
-  console.log("asasd")
+export const userLoggin = createAsyncThunk(USER_LOGGIN, (user) => {
   return axios.post("/api/user/loggin", user).then((res) => {
+    console.log(res)
     saveState(res.data);
     return res.data;
   });
@@ -27,17 +27,23 @@ export const fetchMe = createAsyncThunk(FETCH_ME, () => {
   let token = loadState("setUser").token;
   return axios
     .get("/api/user/me", { headers: { Authorization: `${token}` } })
-    .then((res) => console.log(res.data))
+    .then((res) => res.data)
     .then((data) => {
-      console.log
-      return { data, token };
+      return  { user: data, token: token }
+      
     });
 });
-export const clearUser = createAction(CLEAR_USER);
-
-const userReducer = createReducer({}, {
-  [userLoggin.fullfiled]: (state, action) => action.payload,
-  [fetchMe.fullfiled]: (state, action) => action.payload,
-  [clearUser.fullfiled]: (state, action) => {},
+export const clearUser = createAsyncThunk(CLEAR_USER,()=>{
+  RemoveItem()
 });
+
+const userReducer = createReducer(
+  {},
+  {
+    [userLoggin.rejected]: (state, action) => { return {error:'emailOrPassword'}},
+    [userLoggin.fulfilled]: (state, action) => action.payload,
+    [fetchMe.fulfilled]: (state, action) => action.payload,
+    [clearUser.fulfilled]: (state, action) => { return {}},
+  }
+);
 export default userReducer;

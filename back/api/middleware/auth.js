@@ -16,12 +16,11 @@ const generateNewToken = (user) => {
 };
 //no me funciona el jwt.verify
 const userAuthenticate = async (req, res, next) => {
-  let Token = req.headers.authorization.slice(7);
-  try {
-  
+  let Token = req.headers.authorization
+ 
+  try{
     let decoded =  jwt.verify(Token,privateKey)
-    
-    let user = await User.findOne({ where: { email: decoded.email } });
+    let user = await User.findOne({ where: { email: decoded.data } });
     if (user) {
       req.user = user;
     }

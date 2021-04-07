@@ -1,74 +1,69 @@
 import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Switch, Redirect, component } from "react-router-dom";
-import SimpleRating from '../views/Review'
-import { fetchMe } from "../state/user";
-import { loadState } from "../localStorage";
-import NavbarContainer from "./NavbarContainer";
+import SimpleRating from "../views/Review";
 import { fetchSingleMovie } from "../state/movie";
-
+import CircularIndeterminate from "../views/Loading";
 export default ({ movieId }) => {
   const dispatch = useDispatch();
+  const [Loader,setLoader] = React.useState(false)
   const movie = useSelector((state) => state.movie);
+
+  
   React.useEffect(() => {
-    dispatch(fetchSingleMovie(movieId));
+    setLoader(true)
+    dispatch(fetchSingleMovie(movieId))
+    .then(()=> setTimeout(()=> {setLoader(false)},1000))
   }, []);
 
+  
+
   return (
-    <div className="cardSingleMovie">
+    <>
+    {Loader? <CircularIndeterminate/> : <div className="cardSingleMovie">
       <div className="imageSingleMovie">
         <img src={movie.Poster}></img>
       </div>
 
       <div className="cardContent">
-
         <div className="movieTitle">
           <h1 className="movie__title">{movie.Title}</h1>
+        </div>
+
+        <div className="descripciones">
+          <div className="description">
+            <h3 className="description__plot">{movie.Plot}</h3>
           </div>
 
-<div className="descripciones">
+          <div className="description">
+            <h3 className="description__plot">{movie.Actors}</h3>
+          </div>
+        </div>
+        <div className="RatingCard">
+          <div>
+            <SimpleRating
+              rating={Math.floor(movie.imdbRating / 2)}
+            ></SimpleRating>
+          </div>
 
-     <div className="description">
-       <h3 className="description__plot">
-       {movie.Plot}
-         </h3>
-         </div>
+          <div className="year">
+            <span>{movie.Year}</span>
+          </div>
 
-         
-         <div className="description">
-       <h3 className="description__plot">
-       {movie.Actors}
-         </h3>
-         </div>
-         
-         </div>
-         <div className="RatingCard">
+          <div className="year">
+            <span>{movie.Runtime}</span>
+          </div>
 
-           <div >
-           <SimpleRating rating={Math.floor(movie.imdbRating/2)} ></SimpleRating>
-           </div>
-
-           <div className="year">
-             <span>{movie.Year}</span>
-           </div>
-
-           
-           <div className="year">
-             <span>{movie.Runtime}</span>
-           </div>
-
-<div className="year">
-  <span>{movie.Country}</span>
-</div>
-      
+          <div className="year">
+            <span>{movie.Country}</span>
+          </div>
+        </div>
       </div>
-
-
-      
-       
-      </div>
-    
     </div>
+
+    }
+    
+    </>
   );
 };
 

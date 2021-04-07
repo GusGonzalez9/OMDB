@@ -26,7 +26,6 @@ export default function Paso({ state }) {
 
   return (
     <div className={classes.root}>
-      {console.log(state)}
       <Stepper
         activeStep={state}
         alternativeLabel
@@ -34,7 +33,7 @@ export default function Paso({ state }) {
       >
         {steps.map((label) => (
           <Step key={label} style={{ color: "white" }}>
-            <StepLabel style={{ color: "white" }}>{label} </StepLabel>
+            <StepLabel ><span style={{color:'white'}} >{label}</span> </StepLabel>
           </Step>
         ))}
       </Stepper>
