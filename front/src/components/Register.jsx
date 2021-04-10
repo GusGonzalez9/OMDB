@@ -3,9 +3,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
@@ -14,18 +12,14 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import CircularIndeterminate from "../views/Loading";
 import { errForm } from "../utils/errFront";
-import Paso from "../views/Paso";
-import Character from "../views/Character";
-import Congratulations from "../views/Congratulations";
  const useStyles = makeStyles((theme) => ({
   paper: {
-    /*     marginTop: theme.spacing(8),
-     */ display: "flex",
+     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     backgroundColor:'#eddcd2',
     borderRadius: 12,
-    height: "80%",
+    height: "100%",
     boxShadow: "2px 2px 2px black",
     width: "100%",
   },
@@ -111,7 +105,8 @@ export default function SignUp() {
       dispatch(userRegister(user))
         .then(() => setLoading(false))
         .then(() => handleNext())
-        .then(() => setSlide((prevActiveStep) => prevActiveStep + 1));
+        .then(() => setSlide((prevActiveStep) => prevActiveStep + 1))
+        .then(()=> history.push("/login"))
     }
   };
   const handleNext = () => {
@@ -130,7 +125,7 @@ export default function SignUp() {
           <CircularIndeterminate />
         ) : (
           <>
-            {slide == 0 ? (
+            {
               <div className={classes.paper}>
                 <Avatar className={classes.avatar}>
                   <LockOutlinedIcon />
@@ -211,40 +206,21 @@ export default function SignUp() {
                   </Grid>
                  
                 </form>
-                <Button
-                    type="submit"
-                    variant="contained"
-                  
-                    color="primary"
-                    className={classes.submit}
+                <button
+                    
+                    className="loginButton"
                     onClick={(e) => {
                       handleOnSubmit(e);
                     }}
                   >
-                    Continue
-                  </Button>
+                    Register
+                  </button>
               </div>
-            ) : (
-              <>
-                {slide == 1 ? (
-                  <Character
-                    avatar={setAvatar}
-                    setSlide={setSlide}
-                    setActiveStep={setActiveStep}
-                  />
-                ) : (
-                  <Congratulations user={user} />
-                )}
-              </>
-            )}
+             }
           </>
         )}
-
-        <Box mt={5}></Box>
       </div>
-      <div className="alejo">
-        <Paso state={activeStep} />
-      </div>
+    
     </div>
   );
 }

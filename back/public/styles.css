@@ -254,9 +254,22 @@ span.yLogo {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  height: 65%;
+
 }
 .containerPaper {
-  width: 55%;
+  width: 65%;
+  height: 60%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.containerPaper2 {
+  width: 50%;
+  height: 100%;
   margin-top: 2%;
   display: flex;
   justify-content: center;
@@ -347,22 +360,35 @@ span.yLogo {
   display: flex;
   justify-content: space-evenly;
 }
-.buttonsCongratulations {
+.buttonsCongratulations1 {
   color: white;
-  font-size: 17px;
   font-family: "Nunito Sans", sans-serif;
   background-color: rgb(185, 0, 0);
   border: none;
   border-radius: 7px;
   box-shadow: 2px 2px 2px black;
-  width: 110px;
-  height: 40px;
+  width: 40%;
+  font-size: 90%;  height: 40px;
 }
-.buttonsCongratulations:hover {
+.buttonsCongratulations1:hover {
   background-color: rgba(59, 59, 59, 0.8);
   transition: 0.3s all ease;
 }
 
+.buttonsCongratulations2 {
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: rgb(185, 0, 0);
+  border: none;
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px black;
+  width: 100%;
+  font-size: 90%;  height: 40px;
+}
+.buttonsCongratulations2:hover {
+  background-color: rgba(59, 59, 59, 0.8);
+  transition: 0.3s all ease;
+}
 /* external css: flickity.css */
 
 
@@ -398,5 +424,21 @@ span.yLogo {
  font-family: "Nunito Sans", sans-serif;
 }
 
-
+.loginButton{
+  width: 30%;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #370617;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+}
+.loginButton:hover{
+  background-color: #31061559;
+}
 

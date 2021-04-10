@@ -14,7 +14,6 @@ const generateNewToken = (user) => {
     { algorithm: "HS256" }
   );
 };
-//no me funciona el jwt.verify
 const userAuthenticate = async (req, res, next) => {
   let Token = req.headers.authorization
  

@@ -4,6 +4,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Tooltip from "@material-ui/core/Tooltip";
 import SimpleRating from "../views/Review";
 import AddIcon from "@material-ui/icons/Add";
+import { addToFavorites } from "../state/favorites";
+import { useDispatch, useSelector } from "react-redux";
+import AlertAddFavorite from "../views/AlertAddFavorite";
+import CheckIcon from '@material-ui/icons/Check';
+
 const useStyles = makeStyles((theme) => ({
   Link: {
     color: "white",
@@ -12,14 +17,46 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Card = ({ movie }) => {
-  const [fav, setFav] = React.useState(false);
+let extractor = (arrDeObj)=> {
+  let Titles = []
+  arrDeObj.map(movie => {
+    Titles.push(movie.Title)
+  })
+  return Titles
+
+}
+
+const Card = ({ movie ,incluidas}) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const[addEvent , setAddEvent] = React.useState(false)
+ let titulos =  extractor(incluidas);
+
+  const submitFavorite = () => {
+    setAddEvent(true);
+    dispatch(addToFavorites(movie)).then(() => {
+      setTimeout(() => {
+        setAddEvent(false);
+      }, 1000);
+    });
+  };
+
+
   return (
     <div className="CardContainer">
+      {addEvent ? <AlertAddFavorite /> : null}
+
       <Tooltip title="Add To Favorite">
         <button className="botonAdd">
-          <AddIcon
+          {titulos.includes(movie.Title) ? <CheckIcon style={{
+              fontSize: 25,
+              color: "white",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginLeft: 0,
+              marginRight: 10,
+            }}/> :  <AddIcon
             style={{
               fontSize: 25,
               color: "white",
@@ -29,7 +66,9 @@ const Card = ({ movie }) => {
               marginLeft: 0,
               marginRight: 10,
             }}
-          />
+            onClick={() => submitFavorite()}
+          /> }
+         
         </button>
       </Tooltip>
       <div className="CardImg">

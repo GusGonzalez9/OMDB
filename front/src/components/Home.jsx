@@ -21,11 +21,11 @@ export default function Home() {
       </div>
 
       <div style={{display:'flex',width:'25%',marginTop:'5px',justifyContent:'space-around'}}>
-        <button className="buttonsCongratulations">
+        <button className="buttonsCongratulations1">
 Ver Trailer
         </button>
         <Link to="/movie/tt0372784">
-        <button className="buttonsCongratulations">
+        <button className="buttonsCongratulations2">
 Mas Info
         </button>
         </Link>

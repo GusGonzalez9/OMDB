@@ -4,12 +4,22 @@ class Favorites extends S.Model {}
 
 Favorites.init(
   {
-    title: {
+    Title: {
       type: S.STRING,
     },
-    poster: {
+    Poster: {
       type: S.STRING,
+      allowNull:true
     },
+    Type:{
+      type: S.STRING
+    },
+    Year:{
+      type: S.INTEGER
+    },
+    imdbID : {
+      type: S.STRING
+    }
   },
   { sequelize: db, modelName: "favorite" }
 );
