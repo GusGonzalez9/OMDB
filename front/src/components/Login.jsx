@@ -26,23 +26,23 @@ import { errForm } from "../utils/errFront";
     },
     avatar: {
       margin: theme.spacing(1),
-      backgroundColor: "#eddcd2",
+      backgroundColor: '#370617',
     },
     form: {
-      width: "100%", // Fix IE 11 issue.
+      width: "100%", 
       marginTop: theme.spacing(3),
-    },
-    submit: {
-      margin: theme.spacing(3, 0, 2),
-      width: "50%",
-      marginLeft: "25%",
+      height:'100%',
+      display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'center',
     },
     root: {
       "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-        borderColor: "#eddcd2",
+        borderColor: "violet",
       },
       "& .MuiInputLabel-outlined": {
-        color: "#eddcd2",
+        color: "violet",
       },
     },
     input: {
@@ -97,7 +97,7 @@ import { errForm } from "../utils/errFront";
 
     return (
       <div className="containerMayor">
-        <div className="containerPaper">
+        <div className="containerPaper2">
           <CssBaseline />
           {loading ? (
             <CircularIndeterminate />
@@ -116,6 +116,7 @@ import { errForm } from "../utils/errFront";
                     noValidate
                     onSubmit={(e) => handleOnSubmit(e)}
                     autocomplete="off"
+                    
                   >
                     <Grid container spacing={2}>
                       <Grid item xs={12}>
@@ -150,15 +151,13 @@ import { errForm } from "../utils/errFront";
                         />
                       </Grid>
                     </Grid>
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      color="primary"
-                      className={classes.submit}
+                   <button 
+                 className="loginButton"
                       onClick={(e) => {
                         handleOnSubmit(e);
-                      }}
-                    ></Button>
+                      }}>
+                        Login
+                   </button>
                     {usuario.error ? <AlertError/>: null}
                   </form>
                 </div>

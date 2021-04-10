@@ -1,21 +1,20 @@
 const { Favorites, User } = require("../../models/index");
 const AllFavoritesForUser = (req, res) => {
+  console.log(req.params.id)
   User.findByPk(req.params.userId)
     .then((user) => user.getFavorites())
     .then((favorites) => res.send(favorites));
 };
 
-const AddFavorites = (req, res) => {
-  const { userId, title, poster } = req.body;
-  Favorites.create({ title, poster, userId }).then((favorite) =>
-    res.send(favorite)
-  );
-}; // enviarle el userId es lo mismo que setearselo con favorite.setUser(user)
+const AddFavorites = async(req, res) => {
+  console.log(req.body)
+  const { userId, movie} = req.body;
+  let user = await User.findOne({where:{id : userId}})
+  let favorita = await Favorites.create(movie).then(favorite => favorite.setUser(user))
+  res.send(favorita)
+}; 
 
-const deleteFavorites = async (req, res) => {
-  await Favorites.findByPk(req.params.id);
-  const allFavorites = Favorites.findAll();
-  res.send(allFavorites);
-};
 
-module.exports = { AllFavoritesForUser, AddFavorites, deleteFavorites };
+
+
+module.exports = { AllFavoritesForUser, AddFavorites };
