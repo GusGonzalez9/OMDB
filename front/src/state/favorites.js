@@ -18,17 +18,16 @@ export const addToFavorites = createAsyncThunk(
 
 export const allFavorites = createAsyncThunk(ALL_FAVORITES,  (movie=false,thunkAPI) => {
   const  {user}  = thunkAPI.getState();
-  console.log(user)
   let userId = user.user.id
-  
   return axios.get(`/api/favorites/${userId}`)
 })
 
-export const deleteFavorites = createAsyncThunk(DELETE_FAVORITES, (user) => {
-  return axios.delete(`/api/favorites/${user.id}`);
+export const deleteFavorites = createAsyncThunk(DELETE_FAVORITES, (movieId,thunkAPI ) => {
+  const  {user}  = thunkAPI.getState();
+
+  return axios.delete(`/api/favorites/${user.user.id}/${movieId}`);
 });
 
 const favoriteReducer = createReducer([], {
-  [addToFavorites.fulfilled]: (state, action) => action.payload,
 });
  export default favoriteReducer

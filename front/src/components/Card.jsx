@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
 let extractor = (arrDeObj)=> {
   let Titles = []
-  arrDeObj.map(movie => {
+ arrDeObj[0] && arrDeObj.map(movie => {
     Titles.push(movie.Title)
   })
   return Titles
@@ -29,8 +29,13 @@ let extractor = (arrDeObj)=> {
 const Card = ({ movie ,incluidas}) => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const user = useSelector((state)=> state.user)
   const[addEvent , setAddEvent] = React.useState(false)
- let titulos =  extractor(incluidas);
+
+
+ let titulos = (titulo)=>{
+  return extractor(incluidas).includes(titulo)
+ } 
 
   const submitFavorite = () => {
     setAddEvent(true);
@@ -44,33 +49,35 @@ const Card = ({ movie ,incluidas}) => {
 
   return (
     <div className="CardContainer">
-      {addEvent ? <AlertAddFavorite /> : null}
 
-      <Tooltip title="Add To Favorite">
-        <button className="botonAdd">
-          {titulos.includes(movie.Title) ? <CheckIcon style={{
-              fontSize: 25,
-              color: "white",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginLeft: 0,
-              marginRight: 10,
-            }}/> :  <AddIcon
-            style={{
-              fontSize: 25,
-              color: "white",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginLeft: 0,
-              marginRight: 10,
-            }}
-            onClick={() => submitFavorite()}
-          /> }
-         
-        </button>
-      </Tooltip>
+      {addEvent ? <AlertAddFavorite /> : null}
+    {user.user && user.user.id ? 
+     <Tooltip title="Add To Favorite">
+     <button className="botonAdd" onClick={() => submitFavorite()}>
+       {user.user && user.user.id && titulos(movie.Title) ? <CheckIcon style={{
+           fontSize: 25,
+           color: "white",
+           display: "flex",
+           justifyContent: "center",
+           alignItems: "center",
+           marginLeft: 0,
+           marginRight: 10,
+         }}/> :  <AddIcon
+         style={{
+           fontSize: 25,
+           color: "white",
+           display: "flex",
+           justifyContent: "center",
+           alignItems: "center",
+           marginLeft: 0,
+           marginRight: 10,
+         }}
+      
+       /> }
+      
+     </button>
+   </Tooltip> : null }
+     
       <div className="CardImg">
         <img src={movie.Poster}></img>
       </div>

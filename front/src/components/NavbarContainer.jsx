@@ -24,6 +24,8 @@ import Button from "@material-ui/core/Button";
 import { fetchMovies } from "../state/movies";
 import LocalMoviesIcon from "@material-ui/icons/LocalMovies";
 import {clearUser} from '../state/user'
+
+
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -88,6 +90,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionDesktop: {
     display: "none",
+    width:'40%',
 
     [theme.breakpoints.up("md")]: {
       display: "flex",
@@ -127,6 +130,8 @@ export default function NavbarContainer() {
     history.push("/movies");
   };
 
+  
+
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -145,20 +150,7 @@ export default function NavbarContainer() {
   };
 
   const menuId = "primary-search-account-menu";
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
+ 
 
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
@@ -170,7 +162,8 @@ export default function NavbarContainer() {
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
-    > <Link to="/login" style={{textDecoration:'none'}}>
+    > 
+    {user && !user.user? <> <Link to="/login" style={{textDecoration:'none'}}>
       <MenuItem>
         <p className={classes.items}>LOGIN</p>  
       </MenuItem>
@@ -179,8 +172,17 @@ export default function NavbarContainer() {
       <MenuItem>
         <p className={classes.items}>REGISTER</p>  
       </MenuItem>
-      </Link>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      </Link> </> : 
+      <>
+      <MenuItem onClick={()=> setearLogout()}>
+        <p className={classes.items}>LOGOUT</p>  
+      </MenuItem>
+      </> 
+    }
+   
+      <MenuItem onClick={handleProfileMenuOpen}> 
+      <Link to="/favorites" style={{textDecoration:'none'}}>       
+                  
         <IconButton
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -189,12 +191,14 @@ export default function NavbarContainer() {
         >
           <AccountCircle />
         </IconButton>
-        <p className={classes.items}>My profile</p>
+       
+        <p className={classes.items}>FAVORITES</p>
+        </Link>
       </MenuItem>
     </Menu>
   );
 const setearLogout = ()=>{
-  dispatch(clearUser())
+  dispatch(clearUser()).then(()=> history.push("/"))
 }
   return (
     <div className={classes.grow}>
@@ -252,24 +256,20 @@ const setearLogout = ()=>{
                 </Link>
               </>
             ) : (
-              <div style={{display:'flex' , justifyContent:'space-between', alignItems:'center'}}>
+              <div style={{display:'flex' , justifyContent:'space-between', alignItems:'center',width:'100%'}}>
                 <span style={{color:'white', fontSize:'20px', marginRight:'2%',width:'75%'}}>Welcome {user.user.firstName}!</span>
               <Button color="primary" className={classes.root} onClick={()=> setearLogout()}>
                 LOGOUT
               </Button>
+              <Link to="/favorites" style={{textDecoration:'none'}}>
+              <Button color="primary" className={classes.root}>
+                    FAVORITOS
+                  </Button>
+                  </Link>
               </div>
             )}
 
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="primary"
-            >
-              <AccountCircle />
-            </IconButton>
+          
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -285,7 +285,7 @@ const setearLogout = ()=>{
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-      {renderMenu}
+     
     </div>
   );
 }

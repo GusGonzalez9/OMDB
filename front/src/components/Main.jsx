@@ -14,6 +14,7 @@ import NavbarContainer from "./NavbarContainer";
 export default function App() {
   const dispatch = useDispatch();
   const token = loadState() ? loadState() : undefined;
+  const [loader , setLoader] = React.useState(false)
   React.useEffect(() => {
     if (token) {
       dispatch(fetchMe());
@@ -35,8 +36,9 @@ export default function App() {
         />
         <Route path="/Register" component={Register} />
         <Route path="/login" component={Login} />
+        <Route path="/favorites" component={Favorites} />
         {/* 
-        <Route path="/user/favorites" component={Favorites} />
+        
         <Route path="/user/:id" component={User} />
        
        
