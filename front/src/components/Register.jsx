@@ -21,7 +21,7 @@ import { errForm } from "../utils/errFront";
     borderRadius: 12,
     height: "100%",
     boxShadow: "2px 2px 2px black",
-    width: "100%",
+    width: "80%",
   },
   avatar: {
     margin: theme.spacing(1),

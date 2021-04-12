@@ -9,6 +9,9 @@ export const fetchMovies = createAsyncThunk(GET_MOVIES, (movie) => {
     });
 });
 
+
+
+
 const moviesReducer = createReducer([], {
   [fetchMovies.fulfilled]: (state, action) => action.payload,
 });

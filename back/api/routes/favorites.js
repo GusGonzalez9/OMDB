@@ -5,10 +5,10 @@ const { userAuthenticate } = require("../middleware/auth");
 const {
   AddFavorites,
   AllFavoritesForUser,
+  deleteFavoriteForUser
 } = require("../controllers/middleware/favorites");
 
 router.get("/:userId", AllFavoritesForUser);
+router.delete("/:userId/:movieId",deleteFavoriteForUser)
 router.post("/", userAuthenticate, AddFavorites);
-/* router.delete("/userId", deleteFavorites);
- */
 module.exports = router;
